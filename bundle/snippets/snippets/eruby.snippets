@@ -1,0 +1,78 @@
+snippet = "=" i
+	<%= $1 %>
+snippet %
+	<% $1 %>
+snippet for
+	<% for ${1:item} in ${2:collection} %>
+		<%= $1 %>
+	<% end %>
+snippet if
+	<% if ${1:condition} %>
+		${2}
+	<% end %>
+snippet unless
+	<% unless ${1:condition} %>
+		${2}
+	<% end %>
+snippet title
+	<% title '${1:title}' %>
+snippet link "link" i
+	<%= link_to '$1', $2 %>
+snippet checkbox
+	<%= ${2:f}.label :${1:attribute} %><br />
+	<%= $2.check_box :$1 %>
+snippet text_field
+	<%= ${2:f}.label :${1:attribute} %><br />
+	<%= $2.text_field :$1 %>
+snippet file_field
+	<%= ${2:f}.label :${1:attribute} %><br />
+	<%= $2.file_field :$1 %>
+snippet password_field
+	<%= ${2:f}.label :${1:attribute} %><br />
+	<%= $2.password_field :$1 %>
+snippet text_area
+	<%= ${2:f}.label :${1:attribute} %><br />
+	<%= $2.text_area :$1 %>
+snippet select
+	<%= ${3:f}.label :${1:attribute} %><br />
+	<%= select('${2:model}',:$1,${4}) %>
+snippet radio_button
+	<%= ${2:f}.label :${1:attribute} %><br />
+	<%= $2.radio_button :$1, :${2:tag_value} %>
+snippet hidden_field
+	<%= ${1:f}.hidden_field :${2:attribute} %>
+snippet fields_for
+	<%= f.fields_for :${1:model} do |${2:model_builder}| %>
+		$3
+	<% end %>
+snippet submit
+	<%= f.submit %>
+snippet simple_form_for
+	<%= simple_form_for @${1:model} do |f| %>
+		$2
+		<%= f.button :submit %>
+	<% end %>
+snippet form_for
+	<%= form_for @${1:model} do |f| %>
+		$2
+		<%= f.submit %>
+	<% end %>
+snippet input
+	<%= ${2:f}.input :${1:field} %>
+snippet association
+	<%= ${2:f}.association :${1:name} %>
+snippet render "render"
+	<%= render '${1:item}' %>
+snippet render "render partial"
+	<%= render partial: '${1:item}' %>
+snippet image_tag "image"
+	<%= image_tag '${1:image}${2:.png}' %>
+snippet select_tag
+	<%= label_tag :${1:attribute} %><br />
+	<%= select_tag '${2:name}', ${3}  %>
+snippet paginate
+	<%= paginate @${1:items} %>
+snippet content_for
+	<% content_for :${1:part} do -%>
+		$2
+	<% end -%>
