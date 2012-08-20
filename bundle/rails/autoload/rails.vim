@@ -4462,8 +4462,8 @@ function! s:BufSettings()
   call self.setvar('&suffixesadd', ".rb,.".join(s:view_types,',.'))
   let ft = self.getvar('&filetype')
   if ft =~ '^\%(e\=ruby\|[yh]aml\|javascript\|coffee\|css\|s[ac]ss\|lesscss\)$'
-    call self.setvar('&shiftwidth',4)
-    call self.setvar('&softtabstop',4)
+    call self.setvar('&shiftwidth',2)
+    call self.setvar('&softtabstop',2)
     call self.setvar('&expandtab',1)
     if exists('+completefunc') && self.getvar('&completefunc') == ''
       call self.setvar('&completefunc','syntaxcomplete#Complete')
