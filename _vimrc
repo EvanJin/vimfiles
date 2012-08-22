@@ -73,14 +73,14 @@ nmap k gk
 map <F5> :%s/\s*$//g<cr>:noh<cr>''
 
 "设定文字以及colorscheme
-set guifont=Menlo:h14:i:cANSI
+set guifont=Menlo:h14:i
 
 " set guifontwide=新宋体:h10
 set lines=40
 set t_Co=256
 set background=dark
 
-colorscheme ir_dark
+colorscheme Molokai
 let g:solarized_italic=0
 
 " lucius
@@ -107,7 +107,8 @@ set shortmess=atI
 set notagbsearch
 
 " tab宽度
-set tabstop=4
+" set tabstop=4
+
 " set cindent 
 set shiftwidth=4
 set expandtab "使用空格代替tab键  
@@ -115,11 +116,16 @@ set expandtab "使用空格代替tab键
 " set smarttab
 set softtabstop=4
 
+" set list listchars=tab:\ \ ,trail:·
+
 map <F7> :%retab! <cr>
 
 "智能缩进
 set autoindent 
 set smartindent 
+
+"文本折行
+set textwidth=80
 
 "关闭遇到错误时的声音提示
 autocmd VimEnter * set vb t_vb=
@@ -454,11 +460,10 @@ nmap <A-t> :ConqueTermVSplit Powershell.exe<cr>
 "========================================================================================
 
 "===============================js设置===================================================
-au FileType html,python,ruby,vim,css,javascript setl shiftwidth=4
-au FileType html,python,ruby,vim,css,javascript setl tabstop=4
-au FileType java,php,ruby setl shiftwidth=4
-au FileType java,php,ruby setl tabstop=4
-set smarttab
+au FileType html,python,vim,css,javascript setl shiftwidth=4
+au FileType html,python,vim,css,javascript setl softtabstop=4
+au FileType ruby setl shiftwidth=2
+au FileType ruby setl softtabstop=2
 
 "jquery语法高亮
 au BufRead,BufNewFile *.js set syntax=jquery
