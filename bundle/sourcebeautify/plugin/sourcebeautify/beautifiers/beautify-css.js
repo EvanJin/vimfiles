@@ -31,7 +31,7 @@
 // http://www.w3.org/TR/css3-syntax/
 function css_beautify(source_text, options) {
     options = options || {};
-    var indentSize = options.indent_size || 4;
+    var indentSize = options.indent_size || 2;
     var indentCharacter = options.indent_char || ' ';
 
     // compatibility
