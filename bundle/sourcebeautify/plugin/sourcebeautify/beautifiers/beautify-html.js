@@ -1288,7 +1288,7 @@ if (typeof exports !== "undefined")
 // http://www.w3.org/TR/css3-syntax/
 function css_beautify(source_text, options) {
     options = options || {};
-    var indentSize = options.indent_size || 4;
+    var indentSize = options.indent_size || 2;
     var indentCharacter = options.indent_char || ' ';
 
     // compatibility
@@ -1501,7 +1501,7 @@ function style_html(html_source, options) {
       brace_style;
 
   options = options || {};
-  indent_size = options.indent_size || 4;
+  indent_size = options.indent_size || 2;
   indent_character = options.indent_char || ' ';
   brace_style = options.brace_style || 'collapse';
   max_char = options.max_char == 0 ? Infinity : options.max_char || 70;
