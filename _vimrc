@@ -73,25 +73,25 @@ nmap k gk
 map <F5> :%s/\s*$//g<cr>:noh<cr>''
 
 "设定文字以及colorscheme
-set guifont=Menlo:h14:i
+set guifont=Menlo:h13:w6.5:b:cDEFAULT
 
 " set guifontwide=新宋体:h10
-set lines=40
+" set lines=40
 set t_Co=256
-set background=dark
+" set background=dark
 
-colorscheme Molokai
+colorscheme solarized
 let g:solarized_italic=0
 
 " lucius
-"solarized " jellybeans Molokai cobalt ir_dark
+"solarized " jellybeans Molokai cobalt ir_dark distinguished
 
 
 "设置开启语法高亮
 syntax on
 
 " 设置语法高亮度
-set syn=cpp
+" set syn=cpp
 
 "显示行号
 set nu!
@@ -107,31 +107,25 @@ set shortmess=atI
 set notagbsearch
 
 " tab宽度
-" set tabstop=4
-
-" set cindent 
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab "使用空格代替tab键  
-
 " set smarttab
-set softtabstop=4
-
-" set list listchars=tab:\ \ ,trail:·
+set softtabstop=2
 
 map <F7> :%retab! <cr>
 
 "智能缩进
 set autoindent 
 set smartindent 
-
-"文本折行
-set textwidth=80
+" set cindent 
 
 "关闭遇到错误时的声音提示
 autocmd VimEnter * set vb t_vb=
 
 "设置不自动备份
 set nobackup
+set noswapfile
 
 " 自动重新读入
 set autoread
@@ -270,7 +264,7 @@ endfunction
 " map <F5> :execute "cd" expand("%:h")<CR>
 " set autochdir       "自动切换工作目录，以当前打开的文件所在目录为准
 "定义工作目录
-let g:Source="D:/workspace/"
+let g:Source="F:/www/"
 function Cw(dir)
     execute ":cd " . a:dir
 endfunction
@@ -320,6 +314,7 @@ map <leader>F :FufFile<CR>
 map <leader>f :FufTaggedFile<CR>
 map <leader>g :FufTag<CR>
 map <leader>b :FufBuffer<CR>
+map <leader>fc :FufCoverageFile!<CR>
 "======================================================================================
 
 
@@ -460,10 +455,10 @@ nmap <A-t> :ConqueTermVSplit Powershell.exe<cr>
 "========================================================================================
 
 "===============================js设置===================================================
-au FileType html,python,vim,css,javascript setl shiftwidth=4
-au FileType html,python,vim,css,javascript setl softtabstop=4
-au FileType ruby setl shiftwidth=2
-au FileType ruby setl softtabstop=2
+au FileType html,python,ruby,vim,css,javascript setl shiftwidth=2
+au FileType html,python,ruby,vim,css,javascript setl tabstop=2
+au FileType java,php,ruby setl shiftwidth=2
+au FileType java,php,ruby setl tabstop=2
 
 "jquery语法高亮
 au BufRead,BufNewFile *.js set syntax=jquery
