@@ -1504,7 +1504,7 @@ function style_html(html_source, options) {
   indent_size = options.indent_size || 2;
   indent_character = options.indent_char || ' ';
   brace_style = options.brace_style || 'collapse';
-  max_char = options.max_char == 0 ? Infinity : options.max_char || 70;
+  max_char = options.max_char == 0 ? Infinity : options.max_char || 100;
   unformatted = options.unformatted || ['a'];
 
   function Parser() {
