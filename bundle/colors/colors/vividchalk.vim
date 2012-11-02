@@ -148,7 +148,7 @@ hi Type gui=none
 hi Statement gui=none
 if !has("gui_mac")
     " Mac GUI degrades italics to ugly underlining.
-    hi Comment gui=italic
+    hi Comment gui=none
     hi railsUserClass  gui=italic
     hi railsUserMethod gui=italic
 endif
