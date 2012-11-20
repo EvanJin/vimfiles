@@ -88,12 +88,12 @@ hi  LineNr       guifg=#3D3D3D guibg=#000000 gui=NONE      ctermfg=237   ctermbg
 
 hi  VertSplit    guifg=#202020 guibg=#202020 gui=NONE      ctermfg=234   ctermbg=234  cterm=NONE
 hi  StatusLine   guifg=#9cffd3 guibg=#202020 gui=NONE      ctermfg=85    ctermbg=234  cterm=NONE
-hi  StatusLineNC guifg=#000000 guibg=#202020 gui=bold      ctermfg=0     ctermbg=234  cterm=BOLD
+hi  StatusLineNC guifg=#000000 guibg=#202020 gui=NONE      ctermfg=0     ctermbg=234  cterm=NONE
 
 hi  FoldColumn   guifg=#a0a8b0 guibg=#384048 gui=NONE      ctermfg=248   ctermbg=238  cterm=NONE
 hi  Folded       guifg=#a0a8b0 guibg=#384048 gui=NONE      ctermfg=248   ctermbg=238  cterm=NONE
 
-hi  Title        guifg=#498994 guibg=NONE    gui=BOLD      ctermfg=68     ctermbg=NONE cterm=NONE
+hi  Title        guifg=#498994 guibg=NONE    gui=NONE      ctermfg=68     ctermbg=NONE cterm=NONE
 hi  Visual       guifg=NONE    guibg=#262D51 gui=NONE      ctermfg=NONE  ctermbg=237  cterm=NONE
 
 hi  SpecialKey   guifg=#505050 guibg=#000000 gui=NONE      ctermfg=239   ctermbg=0    term=NONE
@@ -102,16 +102,16 @@ hi  WildMenu     guifg=#28882c guibg=#f0f000 gui=NONE      ctermfg=28    ctermbg
 hi  PmenuSbar    guifg=#000000 guibg=#ffffff gui=NONE      ctermfg=0     ctermbg=15   cterm=NONE
 
 hi  Error        guifg=NONE    guibg=NONE    gui=NONE  guisp=#FF6C60 ctermfg=15   ctermbg=88    cterm=NONE
-hi  ErrorMsg     guifg=#e8e8d3 guibg=#902020  gui=BOLD      ctermfg=15    ctermbg=203  cterm=BOLD
-hi  WarningMsg   guifg=#ffffff guibg=#ff8cc2  gui=BOLD      ctermfg=15    ctermbg=203  cterm=BOLD
+hi  ErrorMsg     guifg=#e8e8d3 guibg=#902020  gui=NONE      ctermfg=15    ctermbg=203  cterm=NONE
+hi  WarningMsg   guifg=#ffffff guibg=#ff8cc2  gui=NONE      ctermfg=15    ctermbg=203  cterm=NONE
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg       guifg=#000000  guibg=#C6C5FE gui=BOLD     ctermfg=0 ctermbg=189 cterm=BOLD
+hi ModeMsg       guifg=#000000  guibg=#C6C5FE gui=NONE     ctermfg=0 ctermbg=189 cterm=NONE
 
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine   guifg=NONE    guibg=#000000 gui=NONE      ctermfg=NONE ctermbg=16  cterm=NONE
-  hi CursorColumn guifg=NONE    guibg=#121212 gui=NONE      ctermfg=NONE ctermbg=233 cterm=BOLD
-  hi MatchParen   guifg=#f6f3e8 guibg=#857b6f gui=BOLD      ctermfg=7    ctermbg=243 cterm=BOLD
+  hi CursorColumn guifg=NONE    guibg=#121212 gui=NONE      ctermfg=NONE ctermbg=233 cterm=NONE
+  hi MatchParen   guifg=#f6f3e8 guibg=#857b6f gui=NONE      ctermfg=7    ctermbg=243 cterm=NONE
   hi Pmenu        guifg=#f6f3e8 guibg=#444444 gui=NONE      ctermfg=7    ctermbg=238 cterm=NONE
   hi PmenuSel     guifg=#000000 guibg=#cae682 gui=NONE      ctermfg=0    ctermbg=186 cterm=NONE
   hi Search       guifg=#f0a0c0 guibg=#302028 gui=NONE ctermfg=176  ctermbg=53  cterm=NONE
@@ -124,16 +124,16 @@ hi Comment     guifg=#585858 guibg=NONE    gui=NONE   ctermfg=240   ctermbg=NONE
 hi String      guifg=#9fba4d guibg=NONE    gui=NONE   ctermfg=143 ctermbg=NONE cterm=NONE
 hi Number      guifg=#cf6a4c guibg=NONE    gui=NONE   ctermfg=130 ctermbg=NONE cterm=NONE
 
-hi Keyword     guifg=#ffb964 guibg=NONE    gui=NONE   ctermfg=214 ctermbg=NONE cterm=BOLD
-hi PreProc     guifg=#2688bd guibg=NONE    gui=BOLD   ctermfg=75 ctermbg=NONE cterm=BOLD
+hi Keyword     guifg=#ffb964 guibg=NONE    gui=NONE   ctermfg=214 ctermbg=NONE cterm=NONE
+hi PreProc     guifg=#2688bd guibg=NONE    gui=NONE   ctermfg=75 ctermbg=NONE cterm=NONE
 hi Conditional guifg=#ffb964 guibg=NONE    gui=NONE   ctermfg=214  ctermbg=NONE cterm=NONE
 
-hi Todo        guifg=#a1178a guibg=#e8db27 gui=BOLD,NONE   ctermfg=89  ctermbg=227  cterm=BOLD
-hi Constant    guifg=#de5833 guibg=NONE    gui=NONE ctermfg=130 ctermbg=NONE cterm=BOLD
+hi Todo        guifg=#a1178a guibg=#e8db27 gui=NONE,NONE   ctermfg=89  ctermbg=227  cterm=NONE
+hi Constant    guifg=#de5833 guibg=NONE    gui=NONE ctermfg=130 ctermbg=NONE cterm=NONE
 
 hi Identifier  guifg=#7e749c guibg=NONE    gui=NONE   ctermfg=104 ctermbg=NONE cterm=NONE
-hi Function    guifg=#edbf62 guibg=NONE    gui=BOLD   ctermfg=172 ctermbg=NONE cterm=BOLD
-hi Type        guifg=#b86e1e guibg=NONE    gui=BOLD   ctermfg=172 ctermbg=NONE cterm=BOLD
+hi Function    guifg=#edbf62 guibg=NONE    gui=NONE   ctermfg=172 ctermbg=NONE cterm=NONE
+hi Type        guifg=#b86e1e guibg=NONE    gui=NONE   ctermfg=172 ctermbg=NONE cterm=NONE
 hi Statement   guifg=#6894de guibg=NONE    gui=NONE   ctermfg=75 ctermbg=NONE cterm=NONE
 
 hi Special     guifg=#458c27 guibg=NONE    gui=NONE   ctermfg=31 ctermbg=NONE cterm=NONE
@@ -144,7 +144,7 @@ hi Operator    guifg=#6ab6ba guibg=NONE    gui=NONE   ctermfg=44 ctermbg=NONE ct
 hi DiffAdd     guifg=#fcfcfc guibg=#034a08    gui=NONE   ctermfg=250 ctermbg=22 cterm=NONE
 hi DiffChange  guifg=#e8e8d3 guibg=#65337a    gui=ITALIC   ctermfg=250 ctermbg=93 cterm=NONE
 hi DiffDelete  guifg=#ff0000 guibg=#330000    gui=NONE   ctermfg=1 ctermbg=88 cterm=NONE
-hi DiffText    guifg=#000000 guibg=#b84fb8    gui=BOLD   ctermfg=232 ctermbg=207 cterm=BOLD
+hi DiffText    guifg=#000000 guibg=#b84fb8    gui=NONE   ctermfg=232 ctermbg=207 cterm=NONE
 
 hi Character   guifg=#cf6a4c guibg=NONE    gui=NONE   ctermfg=209 ctermbg=NONE cterm=NONE
 hi Boolean     guifg=#8197bf guibg=NONE    gui=NONE   ctermfg=75 ctermbg=NONE cterm=NONE
@@ -226,8 +226,8 @@ hi  javaDocSeeTag guifg=#CCCCCC guibg=NONE gui=NONE ctermfg=252 ctermbg=NONE cte
 
 
 " Special for HTML
-hi htmlH1        guifg=#22aba4 guibg=NONE gui=NONE ctermfg=38  ctermbg=NONE cterm=BOLD
-hi htmlLink      guifg=#c777ff guibg=NONE gui=NONE      ctermfg=171 ctermbg=NONE cterm=BOLD
+hi htmlH1        guifg=#22aba4 guibg=NONE gui=NONE ctermfg=38  ctermbg=NONE cterm=NONE
+hi htmlLink      guifg=#c777ff guibg=NONE gui=NONE      ctermfg=171 ctermbg=NONE cterm=NONE
 hi htmlString    guifg=#799668 guibg=NONE gui=NONE      ctermfg=100 ctermbg=NONE cterm=NONE
 hi htmlTagName   guifg=#b097b0 guibg=NONE gui=NONE      ctermfg=175 ctermbg=NONE cterm=NONE
 hi link htmlTag         Keyword
@@ -247,7 +247,7 @@ hi link xmlEndTag       Identifier
 
 
 " Special for CSS
-hi cssTagName guifg=#70a8dd gui=BOLD  ctermfg=74 cterm=BOLD
+hi cssTagName guifg=#70a8dd gui=NONE  ctermfg=74 cterm=NONE
 hi cssBoxProp guifg=#d0af76  gui=NONE  ctermfg=180 gui=NONE
 hi link cssColorProp cssBoxProp
 hi link cssFontProp cssBoxProp
@@ -257,21 +257,21 @@ hi cssIdentifier    guifg=#3fc493 gui=italic ctermfg=115 cterm=NONE
 
 " Special for Markdown
 hi link markdownUrl    htmlLink
-hi markdownCode      guibg=#3a3a3a guifg=#a7bee4 gui=BOLD ctermbg=237 ctermfg=152 cterm=BOLD
+hi markdownCode      guibg=#3a3a3a guifg=#a7bee4 gui=NONE ctermbg=237 ctermfg=152 cterm=NONE
 hi markdownCodeBlock guifg=#c5b1e4 ctermfg=182
 hi markdownLinkText  guifg=#0087ff ctermfg=33
 
-hi markdownH1        guifg=#00af87 guibg=NONE gui=BOLD,NONE ctermfg=36  ctermbg=NONE cterm=BOLD
-hi markdownH2        guifg=#22aba4 guibg=NONE gui=BOLD,NONE ctermfg=38  ctermbg=NONE cterm=BOLD
-hi markdownH3        guifg=#00d7af guibg=NONE gui=NONE ctermfg=43  ctermbg=NONE cterm=BOLD
+hi markdownH1        guifg=#00af87 guibg=NONE gui=NONE,NONE ctermfg=36  ctermbg=NONE cterm=NONE
+hi markdownH2        guifg=#22aba4 guibg=NONE gui=NONE,NONE ctermfg=38  ctermbg=NONE cterm=NONE
+hi markdownH3        guifg=#00d7af guibg=NONE gui=NONE ctermfg=43  ctermbg=NONE cterm=NONE
 
-hi markdownBold    guifg=#878700 guibg=NONE gui=BOLD      ctermfg=100 ctermbg=NONE cterm=BOLD
+hi markdownbold    guifg=#878700 guibg=NONE gui=NONE      ctermfg=100 ctermbg=NONE cterm=NONE
 hi markdownItalic    guifg=#af8700 guibg=NONE gui=NONE      ctermfg=130 ctermbg=NONE cterm=NONE
 
-hi markdownOrderedListMarker  guifg=#5fff00  gui=BOLD ctermfg=82 cterm=BOLD
-hi markdownListMarker  guifg=#ffff00  gui=BOLD ctermfg=226 cterm=BOLD
+hi markdownOrderedListMarker  guifg=#5fff00  gui=NONE ctermfg=82 cterm=NONE
+hi markdownListMarker  guifg=#ffff00  gui=NONE ctermfg=226 cterm=NONE
 
-hi markdownBlockQuote   guifg=#00ffff gui=BOLD ctermfg=14 cterm=BOLD
+hi markdownBlockQuote   guifg=#00ffff gui=NONE ctermfg=14 cterm=NONE
 
 " Special for Javascript
 hi JavaScriptStrings          guifg=#26b3ac guibg=NONE gui=NONE ctermfg=45  ctermbg=NONE  cterm=NONE
@@ -286,5 +286,5 @@ hi pythonBuiltin          guifg=#50bf95 guibg=NONE  gui=NONE ctermfg=42  cterm=N
 hi  link csXmlTag             Keyword
 
 " Special for PHP
-hi phpDefine  guifg=#ffc795    gui=BOLD ctermfg=209 cterm=BOLD
+hi phpDefine  guifg=#ffc795    gui=NONE ctermfg=209 cterm=NONE
 hi phpStringSingle  guifg=#e8e8d3 guibg=NONE gui=NONE ctermfg=250 ctermbg=NONE  cterm=NONE
