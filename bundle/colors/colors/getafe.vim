@@ -48,7 +48,7 @@ let colors_name = "getafe"
 hi ColorColumn                     guibg=#1B1D1E   gui=none                            ctermbg=234
 hi Conceal         guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Cursor          guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi CursorIM        guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+hi CursorIM        guifg=#F8FFF9   guibg=#AEEE00   gui=none            ctermfg=15      ctermbg=234
 hi CursorColumn    guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi CursorLine                      guibg=#1B1D1E   gui=none                            ctermbg=234
 hi Directory       guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
@@ -147,8 +147,8 @@ hi StatusLine      guifg=#F8FFF9   guibg=#01B0F0    gui=bold           ctermfg=1
 hi StatusLineNC    guifg=#F8FFF9   guibg=#5A7085                       ctermfg=15      ctermbg=60
 hi Todo            guifg=#000000   guibg=#FFDC00    gui=bold           ctermfg=0       ctermbg=220
 hi Visual                          guibg=#5A7085                                       ctermbg=60
-hi CursorLine                      guibg=#5A7085                                       ctermbg=60
-hi ColorColumn                     guibg=#5A7085                                       ctermbg=60
+hi CursorLine                      guibg=#1B1D1E                                       ctermbg=60
+hi ColorColumn                     guibg=#1B1D1E                                       ctermbg=60
 hi ModeMsg         guifg=#000000   guibg=#FFDC00                       ctermfg=0       ctermbg=220
 hi SpecialKey      guifg=#5A7085                                       ctermfg=60
 hi ErrorMsg        guifg=#000000   guibg=#FF500E                       ctermfg=0       ctermbg=202
