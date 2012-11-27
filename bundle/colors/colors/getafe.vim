@@ -81,9 +81,9 @@ hi SpellLocal      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=1
 hi SpellRare       guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi StatusLine      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi StatusLineNC    guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi TabLine         guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi TabLineFill     guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi TabLineSel      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+hi TabLine         guifg=#DAD9BB   guibg=#041E23   gui=none            ctermfg=15      ctermbg=234
+hi TabLineFill     guifg=#DAD9BB   guibg=#041E23   gui=none            ctermfg=15      ctermbg=234
+hi TabLineSel      guifg=#AEEE00   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Title           guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi VisualNOS       guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi WarningMsg      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
