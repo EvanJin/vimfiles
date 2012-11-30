@@ -3,31 +3,6 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-set diffexpr=MyDiff()
-function MyDiff()
-    let opt = '-a --binary '
-    if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-    if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-    let arg1 = v:fname_in
-    if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-    let arg2 = v:fname_new
-    if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-    let arg3 = v:fname_out
-    if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-    let eq = ''
-    if $VIMRUNTIME =~ ' '
-        if &sh =~ '\<cmd'
-            let cmd = '""' . $VIMRUNTIME . '\diff"'
-            let eq = '"'
-        else
-            let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-        endif
-    else
-        let cmd = $VIMRUNTIME . '\diff'
-    endif
-    silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
-
 " call pathogen  
 " filetype off  
 call pathogen#infect()
@@ -38,114 +13,138 @@ filetype plugin indent on
 
 
 
-"=============================»ù±¾Éè¶¨================================================
-"°ïÖúÎÄµµÄ¬ÈÏÖĞÎÄ 
+"=============================åŸºæœ¬è®¾å®š================================================
+"å¸®åŠ©æ–‡æ¡£é»˜è®¤ä¸­æ–‡ 
 set helplang=cn 
 
-"Éè¶¨Ó³Éä±ê
+"è®¾å®šæ˜ å°„æ ‡
 let mapleader   = ","
 let g:mapleader = ","
 
-"Éè¶¨cursor
+" é¼ æ ‡
+set mouse=a
+set selection=exclusive
+set selectmode=mouse,key
+
+"è®¾å®šcursor
 " set guicursor=n-v-c-i:block-Cursor
 
 "_vimrc
 map <leader>s :source $vim/_vimrc<cr>
 
-"¿ìËÙ´ò¿ª_vimrc(.vimrc)½øĞĞ±à¼­£¬¼üÅÌ²Ù×÷
+"å¿«é€Ÿæ‰“å¼€_vimrc(.vimrc)è¿›è¡Œç¼–è¾‘ï¼Œé”®ç›˜æ“ä½œ
 map <leader>e :e! $vim/_vimrc<cr>
 
-"±£´æºÍËÑË÷
+"ä¿å­˜å’Œæœç´¢
 nmap <leader>w :w!<cr>
+nmap <leader>q :wq<cr>
+nmap qq :q!<cr>
 
 
-"¿ìËÙÇĞ»»´°¿Ú Ö»ÒªÓÃctrl¼ü+j[k,h,l],¾Í¿ÉÒÔ£¬²»ÓÃÔ­À´µÄctrl+w j[k,h,l]µÄ·½Ê½
+"å¿«é€Ÿåˆ‡æ¢çª—å£ åªè¦ç”¨ctrlé”®+j[k,h,l],å°±å¯ä»¥ï¼Œä¸ç”¨åŸæ¥çš„ctrl+w j[k,h,l]çš„æ–¹å¼
 map <C-j> <C-W>j 
-map <C-k> <C-W>k 
-map <C-h> <C-W>h 
-map <C-l> <C-W>l
+map <S-k> <C-W>k 
+map <S-h> <C-W>h 
+map <S-l> <C-W>l
 
 " map j to gj and k to gk, so line navigation ignores line wrap
 nmap j gj
 nmap k gk
 
-"×Ô¶¯Çå³ıĞĞÎ²¿Õ¸ñ
-map <F5> :%s/\s*$//g<cr>:noh<cr>''
+"è®¾å®šæ–‡å­—ä»¥åŠcolorscheme
+set guifont=Monaco:h12
+" set guifont=DejaVu_Sans_Mono:h14
+" set guifont=Menlo:h13
+" set guifont=Source_Code_Pro:h13:cDEFAULT
+" set guifontwide=å¹¼åœ†:b:h13:cGB2312  
 
-"Éè¶¨ÎÄ×ÖÒÔ¼°colorscheme
-set guifont=Menlo:h13:w6.5:b:cDEFAULT
+" set guifontwide=æ–°å®‹ä½“:h10
+set lines=40
+if ! has("gui_running") 
+  set t_Co=256 
+endif 
 
-" set guifontwide=ĞÂËÎÌå:h10
-" set lines=40
-set t_Co=256
-" set background=dark
+colorscheme getafe
+" let g:solarized_italic=0
+" lucius Molokai  jellybeans Molokai cobalt ir_dark desertink
 
-colorscheme solarized
-let g:solarized_italic=0
+"solarized change background
+" call togglebg#map("<F6>")
 
-" lucius
-"solarized " jellybeans Molokai cobalt ir_dark distinguished
-
-
-"ÉèÖÃ¿ªÆôÓï·¨¸ßÁÁ
+"è®¾ç½®å¼€å¯è¯­æ³•é«˜äº®
 syntax on
 
-" ÉèÖÃÓï·¨¸ßÁÁ¶È
-" set syn=cpp
+" è®¾ç½®è¯­æ³•é«˜äº®åº¦
+set syn=cpp
 
-"ÏÔÊ¾ĞĞºÅ
+"æ˜¾ç¤ºè¡Œå·
 set nu!
+" set numberwidth=2 
 
-" ²éÕÒ½á¹û¸ßÁÁ¶ÈÏÔÊ¾, ËÑË÷²»Çø·Ö´óĞ¡Ğ´
+" æŸ¥æ‰¾ç»“æœé«˜äº®åº¦æ˜¾ç¤º, æœç´¢ä¸åŒºåˆ†å¤§å°å†™
 set ignorecase
+set smartcase
 set hlsearch
 
-"Æô¶¯Ê±²»ÏÔÊ¾¾èÔùÌáÊ¾
+"å¯åŠ¨æ—¶ä¸æ˜¾ç¤ºæèµ æç¤º
 set shortmess=atI
 
-"¹Ø±Õ´íÎóÌáÊ¾
+"å…³é—­é”™è¯¯æç¤º
 set notagbsearch
 
-" tab¿í¶È
+" tabå®½åº¦
 set tabstop=2
 set shiftwidth=2
-set expandtab "Ê¹ÓÃ¿Õ¸ñ´úÌætab¼ü  
-" set smarttab
+set expandtab "ä½¿ç”¨ç©ºæ ¼ä»£æ›¿tabé”®  
 set softtabstop=2
+" set list listchars=tab:\ \ ,trail:Â·
 
-map <F7> :%retab! <cr>
+map <F7> :%retab<cr>
 
-"ÖÇÄÜËõ½ø
+"æ™ºèƒ½ç¼©è¿›
 set autoindent 
-set smartindent 
+" set smartindent 
+set ai!
 " set cindent 
 
-"¹Ø±ÕÓöµ½´íÎóÊ±µÄÉùÒôÌáÊ¾
+"æ–‡æœ¬æŠ˜è¡Œ
+set textwidth=80
+
+"å…³é—­é‡åˆ°é”™è¯¯æ—¶çš„å£°éŸ³æç¤º
 autocmd VimEnter * set vb t_vb=
 
-"ÉèÖÃ²»×Ô¶¯±¸·İ
+"è®¾ç½®ä¸è‡ªåŠ¨å¤‡ä»½
 set nobackup
 set noswapfile
 
-" ×Ô¶¯ÖØĞÂ¶ÁÈë
+" è‡ªåŠ¨é‡æ–°è¯»å…¥
 set autoread
 set tags=tags;
 
-" ×Ô¶¯¸Ä±äµ±Ç°Ä¿Â¼
+" è‡ªåŠ¨æ”¹å˜å½“å‰ç›®å½•
 " if has('netbeans_intg')
 "     set autochdir
 " endif
 
-" ¸ßÁÁ¹â±êĞĞ 
+" é«˜äº®å…‰æ ‡è¡Œ 
 set cursorline
 
-syntax enable                " ´ò¿ªÓï·¨¸ßÁÁ
-syntax on                    " ¿ªÆôÎÄ¼şÀàĞÍÕì²â
-filetype indent on           " Õë¶Ô²»Í¬µÄÎÄ¼şÀàĞÍ²ÉÓÃ²»Í¬µÄËõ½ø¸ñÊ½
-filetype plugin on           " Õë¶Ô²»Í¬µÄÎÄ¼şÀàĞÍ¼ÓÔØ¶ÔÓ¦µÄ²å¼ş
-filetype plugin indent on    " ÆôÓÃ×Ô¶¯²¹È«
+" æ•´è¯æ¢è¡Œ
+set linebreak        
 
-"Toggle Menu and Toolbar F2²Ù×÷¹¤¾ßÀ¸
+" set list listchars=tab:â–·â‹…\,trail:â‹…,nbsp:â‹…
+
+" è®¾ç½®åŒ¹é…æ¨¡å¼ï¼Œç±»ä¼¼å½“è¾“å…¥ä¸€ä¸ªå·¦æ‹¬å·æ—¶ä¼šåŒ¹é…ç›¸åº”çš„é‚£ä¸ªå³æ‹¬å·
+set showmatch  
+
+
+syntax enable                " æ‰“å¼€è¯­æ³•é«˜äº®
+syntax on                    " å¼€å¯æ–‡ä»¶ç±»å‹ä¾¦æµ‹
+filetype indent on           " é’ˆå¯¹ä¸åŒçš„æ–‡ä»¶ç±»å‹é‡‡ç”¨ä¸åŒçš„ç¼©è¿›æ ¼å¼
+filetype plugin on           " é’ˆå¯¹ä¸åŒçš„æ–‡ä»¶ç±»å‹åŠ è½½å¯¹åº”çš„æ’ä»¶
+filetype plugin indent on    " å¯ç”¨è‡ªåŠ¨è¡¥å…¨
+
+"Toggle Menu and Toolbar F2æ“ä½œå·¥å…·æ 
 set guioptions-=m
 set guioptions-=T
 map <silent> <F2> :if &guioptions =~# 'T' <Bar>
@@ -156,28 +155,28 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
             \set guioptions+=m <Bar>
             \endif<CR>
 
-"F3È¡Ïû¸ßÁÁËÑË÷
+"F3å–æ¶ˆé«˜äº®æœç´¢
 nmap <F3> :nohlsearch<CR> 
 " =========
 " GUI
 " =========
 if has("win32")
-    " set guioptions=cr
+    set guioptions=cr
 
-    " Windows ¼æÈİÅäÖÃ
+    " Windows å…¼å®¹é…ç½®
     source $VIMRUNTIME/mswin.vim
 
-    " f11 ×î´ó»¯
+    " f11 æœ€å¤§åŒ–
     nmap <f11> :call libcallnr('fullscreen.dll', 'ToggleFullScreen', 0)<cr>
     nmap <Leader>ff :call libcallnr('fullscreen.dll', 'ToggleFullScreen', 0)<cr>
 
-    " ×Ô¶¯×î´ó»¯´°¿Ú
+    " è‡ªåŠ¨æœ€å¤§åŒ–çª—å£
     au GUIEnter * simalt ~x
 
-    " ¸ø Win32 ÏÂµÄ gVim ´°¿ÚÉèÖÃÍ¸Ã÷¶È
-    " au GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 247)
+    " ç»™ Win32 ä¸‹çš„ gVim çª—å£è®¾ç½®é€æ˜åº¦
+    au GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 243)
 
-    " ×ÖÌåÅäÖÃ
+    " å­—ä½“é…ç½®
     " exec 'set guifont='.iconv('Monaco', &enc, 'utf-8').':h12'
     " exec 'set guifontwide='.iconv('Microsoft\ YaHei', &enc, 'gbk').':h10'
 endif
@@ -185,25 +184,21 @@ endif
 
 
 
-"===================================ÔÚwindowsÏÂµÄ±àÂëÉèÖÃ=============================
+"===================================åœ¨windowsä¸‹çš„ç¼–ç è®¾ç½®=============================
+scriptencoding utf-8
 set encoding=utf-8  
-set fileencodings=utf-8,chinese,latin-1  
-if has("win32")  
-    set fileencoding=utf-8
-else    
-    set fileencoding=utf-8  
-endif  
+set fileencodings=utf-8,gbk,ucs-bom,cp936 
 
-"½â¾ö²Ëµ¥ÂÒÂë  
+"è§£å†³èœå•ä¹±ç   
 source $VIMRUNTIME/delmenu.vim  
 source $VIMRUNTIME/menu.vim  
 
-"½â¾öconsleÊä³öÂÒÂë  
+"è§£å†³consleè¾“å‡ºä¹±ç   
 language messages zh_CN.utf-8  
 "=====================================================================================
 
 
-" ======================================ĞÂ½¨±êÇ©Ò³¿ì½İ¼ü==============================
+" ======================================æ–°å»ºæ ‡ç­¾é¡µå¿«æ·é”®==============================
 nmap <A-w>   :tabnew<cr>
 nmap <C-m>   :tabprevious<cr>
 nmap <C-n>   :tabnext<cr>
@@ -213,7 +208,7 @@ nmap <C-Tab> :tabnext<cr>
 
 
 
-"=============================À¨ºÅ¡¢ÒıºÅ¡¢ÖĞÀ¨ºÅµÈ×Ô¶¯Æ¥Åä============================
+"=============================æ‹¬å·ã€å¼•å·ã€ä¸­æ‹¬å·ç­‰è‡ªåŠ¨åŒ¹é…============================
 inoremap ( () <Left><ESC>  
 inoremap { {} <Left><ESC>
 inoremap [ [] <Left><ESC>
@@ -223,7 +218,7 @@ inoremap ' '' <Left><ESC>
 "=====================================================================================
 
 
-"===================================²åÈëÄ£Ê½·½Ïò¼ü==================================
+"===================================æ’å…¥æ¨¡å¼æ–¹å‘é”®==================================
 inoremap <A-j> <Left>
 inoremap <A-k> <Down>
 inoremap <A-i> <Up>
@@ -232,15 +227,15 @@ inoremap <A-l> <Right>
 
 
 
-"===================================´°¿ÚÆô¶¯Éè¶¨======================================
+"===================================çª—å£å¯åŠ¨è®¾å®š======================================
 if has("gui_running")
-    au GUIEnter * simalt ~x  " ´°¿ÚÆô¶¯Ê±×Ô¶¯×î´ó»¯
-    "set guioptions-=m       " Òş²Ø²Ëµ¥À¸
-    set guioptions-=T        " Òş²Ø¹¤¾ßÀ¸
-    set guioptions-=L       " Òş²Ø×ó²à¹ö¶¯Ìõ
-    " set guioptions-=r       " Òş²ØÓÒ²à¹ö¶¯Ìõ
-    "set guioptions-=b       " Òş²Øµ×²¿¹ö¶¯Ìõ
-    "set showtabline=0       " Òş²ØTabÀ¸
+    au GUIEnter * simalt ~x  " çª—å£å¯åŠ¨æ—¶è‡ªåŠ¨æœ€å¤§åŒ–
+    set guioptions-=m       " éšè—èœå•æ 
+    set guioptions-=T        " éšè—å·¥å…·æ 
+    set guioptions-=L       " éšè—å·¦ä¾§æ»šåŠ¨æ¡
+    set guioptions-=r       " éšè—å³ä¾§æ»šåŠ¨æ¡
+    set guioptions-=b       " éšè—åº•éƒ¨æ»šåŠ¨æ¡
+    "set showtabline=0       " éšè—Tabæ 
 endif
 
 set laststatus=2                         
@@ -249,22 +244,22 @@ set cmdheight=2
 
 
 
-"==================================ÃüÁîĞĞÓÚ×´Ì¬ĞĞ======================================
+"==================================å‘½ä»¤è¡ŒäºçŠ¶æ€è¡Œ======================================
 set ch=1
 set stl=\ [File]\ %F%m%r%h%y[%{&fileformat},%{&fileencoding}]\ %w\ \ [PWD]\ %r%{GetPWD()}%h\ %=\ [Line]%l/%L\ %=\[%P]
-set ls=2 " Ê¼ÖÕÏÔÊ¾×´Ì¬ĞĞ
-set wildmenu "ÃüÁîĞĞ²¹È«ÒÔÔöÇ¿Ä£Ê½ÔËĞĞ
+set ls=2 " å§‹ç»ˆæ˜¾ç¤ºçŠ¶æ€è¡Œ
+set wildmenu "å‘½ä»¤è¡Œè¡¥å…¨ä»¥å¢å¼ºæ¨¡å¼è¿è¡Œ
 "======================================================================================
 
 
-"===================================»ñÈ¡µ±Ç°Ä¿Â¼=======================================
+"===================================è·å–å½“å‰ç›®å½•=======================================
 func! GetPWD()
     return substitute(getcwd(), "", "", "g")
 endfunction
 " map <F5> :execute "cd" expand("%:h")<CR>
-" set autochdir       "×Ô¶¯ÇĞ»»¹¤×÷Ä¿Â¼£¬ÒÔµ±Ç°´ò¿ªµÄÎÄ¼şËùÔÚÄ¿Â¼Îª×¼
-"¶¨Òå¹¤×÷Ä¿Â¼
-let g:Source="F:/www/"
+" set autochdir       "è‡ªåŠ¨åˆ‡æ¢å·¥ä½œç›®å½•ï¼Œä»¥å½“å‰æ‰“å¼€çš„æ–‡ä»¶æ‰€åœ¨ç›®å½•ä¸ºå‡†
+"å®šä¹‰å·¥ä½œç›®å½•
+let g:Source="D:/workspace/"
 function Cw(dir)
     execute ":cd " . a:dir
 endfunction
@@ -273,43 +268,46 @@ com -nargs=1 Chw  call Cw()
 "======================================================================================
 
 
-"=====================================ÕÛµşÉèÖÃ=========================================
+"=====================================æŠ˜å è®¾ç½®=========================================
 " set foldenable
-" ÉèÖÃÓï·¨ÕÛµş
-" manual  ÊÖ¹¤¶¨ÒåÕÛµş
-" indent  ¸ü¶àµÄËõ½ø±íÊ¾¸ü¸ß¼¶±ğµÄÕÛµş
-" expr    ÓÃ±í´ïÊ½À´¶¨ÒåÕÛµş
-" syntax  ÓÃÓï·¨¸ßÁÁÀ´¶¨ÒåÕÛµş
-" diff    ¶ÔÃ»ÓĞ¸ü¸ÄµÄÎÄ±¾½øĞĞÕÛµş
-" marker  ¶ÔÎÄÖĞµÄ±êÖ¾ÕÛµş
+" è®¾ç½®è¯­æ³•æŠ˜å 
+" manual  æ‰‹å·¥å®šä¹‰æŠ˜å 
+" indent  æ›´å¤šçš„ç¼©è¿›è¡¨ç¤ºæ›´é«˜çº§åˆ«çš„æŠ˜å 
+" expr    ç”¨è¡¨è¾¾å¼æ¥å®šä¹‰æŠ˜å 
+" syntax  ç”¨è¯­æ³•é«˜äº®æ¥å®šä¹‰æŠ˜å 
+" diff    å¯¹æ²¡æœ‰æ›´æ”¹çš„æ–‡æœ¬è¿›è¡ŒæŠ˜å 
+" marker  å¯¹æ–‡ä¸­çš„æ ‡å¿—æŠ˜å 
 set foldmethod=indent
 
-"ÕÛµşÏà¹ØµÄ¿ì½İ¼ü
-"zR ´ò¿ªËùÓĞµÄÕÛµş
+"æŠ˜å ç›¸å…³çš„å¿«æ·é”®
+"zR æ‰“å¼€æ‰€æœ‰çš„æŠ˜å 
 "za Open/Close (toggle) a folded group of lines.
 "zA Open a Closed fold or close and open fold recursively.
-"zi È«²¿ Õ¹¿ª/¹Ø±Õ ÕÛµş
-"zo ´ò¿ª (open) ÔÚ¹â±êÏÂµÄÕÛµş
-"zc ¹Ø±Õ (close) ÔÚ¹â±êÏÂµÄÕÛµş
-"zC Ñ­»·¹Ø±Õ (Close) ÔÚ¹â±êÏÂµÄËùÓĞÕÛµş
-"zM ¹Ø±ÕËùÓĞ¿ÉÕÛµşÇøÓò
-"ÉèÖÃÕÛµşÇøÓòµÄ¿í¶È
+"zi å…¨éƒ¨ å±•å¼€/å…³é—­ æŠ˜å 
+"zo æ‰“å¼€ (open) åœ¨å…‰æ ‡ä¸‹çš„æŠ˜å 
+"zc å…³é—­ (close) åœ¨å…‰æ ‡ä¸‹çš„æŠ˜å 
+"zC å¾ªç¯å…³é—­ (Close) åœ¨å…‰æ ‡ä¸‹çš„æ‰€æœ‰æŠ˜å 
+"zM å…³é—­æ‰€æœ‰å¯æŠ˜å åŒºåŸŸ
+"è®¾ç½®æŠ˜å åŒºåŸŸçš„å®½åº¦
 "set foldcolumn=0
-"ÉèÖÃÕÛµş²ãÊıÎª
+"è®¾ç½®æŠ˜å å±‚æ•°ä¸º
 "setlocal foldlevel=1
-"ĞÂ½¨µÄÎÄ¼ş£¬¸Õ´ò¿ªµÄÎÄ¼ş²»ÕÛµş
+"æ–°å»ºçš„æ–‡ä»¶ï¼Œåˆšæ‰“å¼€çš„æ–‡ä»¶ä¸æŠ˜å 
 autocmd! BufNewFile,BufRead * setlocal nofoldenable
 "======================================================================================
 
 
-"=====================================NERDTree²å¼şµÄ¿ì½İ¼ü=============================
-nmap <silent> <leader>nt :NERDTree<cr>
+"=====================================NERDTreeæ’ä»¶çš„å¿«æ·é”®=============================
+nmap <silent> <F6> :NERDTreeToggle<cr> :NERDTreeMirror<cr> 
 let NERDTreeShowBookmarks=1
-let NERDTreeWinSize=20
+let NERDTreeWinSize=22
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeQuitOnOpen=0
 "======================================================================================
 
 
-"=====================================ÉèÖÃFuzzyFinder==================================
+"=====================================è®¾ç½®FuzzyFinder==================================
 map <leader>F :FufFile<CR>
 map <leader>f :FufTaggedFile<CR>
 map <leader>g :FufTag<CR>
@@ -322,40 +320,49 @@ map <leader>fc :FufCoverageFile!<CR>
 nmap <silent><leader>t :CommandT<cr>
 let g:CommandTMaxFiles=40000
 set wildignore=*.pdf,*.o  " ignore certain file names
-set wildignore+=*.o,*.obj,*.git,*.png,*.jpg,*.java,*.dll,*.gif
+set wildignore+=*.o,*.obj,*.git,*.png,*.jpg,*.java,*.dll,*.gif,*.zip,*.log,*.sh
 set wildignore+=*.sw? " Vim swap files
 "======================================================================================
 
 
 
-"=====================================MRU²å¼şµÄ¿ì½İ¼ü==================================
+"=====================================MRUæ’ä»¶çš„å¿«æ·é”®==================================
 nmap <silent> <leader>mr :MRU<cr>
 "======================================================================================
 
 
-"=====================================TlistÌáÊ¾==========================================
+"=====================================Tlistæç¤º==========================================
 map <leader>ti :TlistToggle<CR>
-let Tlist_Show_One_File    = 1            "²»Í¬Ê±ÏÔÊ¾¶à¸öÎÄ¼şµÄtag£¬Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄ
-let Tlist_Exit_OnlyWindow  = 1          "Èç¹ûtaglist´°¿ÚÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³övim
-let Tlist_Use_Right_Window = 1         "ÔÚÓÒ²à´°¿ÚÖĞÏÔÊ¾taglist´°¿Ú
+let Tlist_Show_One_File    = 1            "ä¸åŒæ—¶æ˜¾ç¤ºå¤šä¸ªæ–‡ä»¶çš„tagï¼Œåªæ˜¾ç¤ºå½“å‰æ–‡ä»¶çš„
+let Tlist_Exit_OnlyWindow  = 1          "å¦‚æœtaglistçª—å£æ˜¯æœ€åä¸€ä¸ªçª—å£ï¼Œåˆ™é€€å‡ºvim
+let Tlist_Use_Right_Window = 1         "åœ¨å³ä¾§çª—å£ä¸­æ˜¾ç¤ºtaglistçª—å£
 if has('eval') 
     let Tlist_Inc_Winwidth=0 
 endif 
 let Tlist_JS_Settings = 'javascript;s:string;a:array;o:object;f:function'
 let g:tlist_javascript_settings = 'javascript;r:var;s:string;a:array;o:object;u:function'
-let Tlist_Ctags_Cmd = 'E:\ChrisLattner\ctags58\ctags58'
-"=====================================TlistÌáÊ¾==========================================
+" let Tlist_Ctags_Cmd = 'E:\ChrisLattner\ctags58\ctags58'
+"=====================================Tlistæç¤º==========================================
 
 
 
-"=====================================TagBarÌáÊ¾==========================================
+"=====================================TagBaræç¤º==========================================
 nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_ctags_bin='ctags'
+let g:tagbar_ctags_bin='D:\ctags58\ctags.exe'
 let g:tagbar_width=30
+" let g:tagbar_type_javascript = {
+"     \ 'ctagstype' : 'JavaScript',
+"     \ 'kinds'     : [
+"         \ 'o:objects',
+"         \ 'f:functions',
+"         \ 'a:arrays',
+"         \ 's:strings'
+"     \ ]
+" \ }
 "========================================================================================
 
 
-"====================================neocomplcacheÉèÖÃ===================================
+"====================================neocomplcacheè®¾ç½®===================================
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 
@@ -454,25 +461,43 @@ set ofu=syntaxcomplete#Complete
 nmap <A-t> :ConqueTermVSplit Powershell.exe<cr>   
 "========================================================================================
 
-"===============================jsÉèÖÃ===================================================
-au FileType html,python,ruby,vim,css,javascript setl shiftwidth=2
-au FileType html,python,ruby,vim,css,javascript setl tabstop=2
-au FileType java,php,ruby setl shiftwidth=2
-au FileType java,php,ruby setl tabstop=2
+"====================================      Ctrl-P               =========================
+let g:ctrlp_max_files=10000  
+ let g:ctrlp_max_depth = 40
+"========================================================================================
 
-"jqueryÓï·¨¸ßÁÁ
+
+"====================================Syntastic plugin ===================================
+let g:syntastic_check_on_open=1
+"========================================================================================
+
+
+"===============================jsè®¾ç½®===================================================
+au FileType ruby setl shiftwidth=2
+au FileType ruby setl softtabstop=2
+
+au FileType html,python,vim,css,javascript setl shiftwidth=4
+au FileType html,python,vim,css,javascript setl softtabstop=4
+au FileType html,python,vim,css,javascript setl expandtab
+au FileType html,python,vim,css,javascript setl tabstop=4
+
+"jqueryè¯­æ³•é«˜äº®
 au BufRead,BufNewFile *.js set syntax=jquery
 
-"ÉèÖÃJS×Öµä  
+"è®¾ç½®JSå­—å…¸  
 autocmd FileType javascript set dictionary=$vim/vimfiles/dict/javascript.dict  
 
-" ´ò¿ªjavascript¶Ôdom¡¢htmlºÍcssµÄÖ§³Ö 
+" æ‰“å¼€javascriptå¯¹domã€htmlå’Œcssçš„æ”¯æŒ 
 let javascript_enable_domhtmlcss=1   
 "======================================================================================
 
 
-"===============================ÉèÖÃpythonÓï·¨¸ßÁÁ=====================================
+"===============================è®¾ç½®pythonè¯­æ³•é«˜äº®=====================================
 au BufNewFile,BufRead *.py,*.pyw set syntax=python
 let g:pydiction_location = $Vim.'/vimfiles/dict/complete-dict'
 au FileType python set ft=python.django 
 " au FileType html set ft=htmldjango.html
+
+"===============================Json Syntax============================================
+au! BufRead,BufNewFile *.json set filetype=json                                       
+"======================================================================================
