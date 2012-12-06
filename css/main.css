@@ -14,9 +14,44 @@ body {
 .blog-list {
     width: 740px;
     float: left;
+    margin-top: 80px;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 2px;
+    width: 740px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+    padding-bottom: 6px;
+    margin-bottom: 55px;
+}
+
+.blog-list .post .post-title {
+    width: 100%;
+    height: 30px;
+    padding-left: 20px;
+    line-height: 30px;
+}
+
+.blog-list .post .post-media, .blog-list .post .post-media img {
+    width: 740px;
+}
+
+.blog-list .post .post-content {
+    margin: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #E4E1E1;
+}
+
+.blog-list .post .post-footer {
+    margin: 15px;
+    padding-left: 12px;
 }
 
 .side-bar {
     width: 220px;
     float: right;
+    margin-top: 80px;
 }
+
+

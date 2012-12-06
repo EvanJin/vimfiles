@@ -15,7 +15,7 @@ body {
 }
 ol, ul {
     list-style: none;
-} 
+}
 a {
     text-decoration: none;
 }
@@ -33,3 +33,13 @@ table {
 .clear {
     clear: both;
 }
+h3 {
+    font-size: 13px;
+    line-height: 22px;
+    color: #929292;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    text-transform: none;
+}
+
