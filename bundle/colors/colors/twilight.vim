@@ -27,9 +27,9 @@ hi VertSplit  guifg=#3f3f3f ctermfg=237 guibg=#3f3f3f ctermbg=237 gui=NONE cterm
 hi MatchParen  guifg=#cda869 ctermfg=179 guibg=NONE gui=NONE cterm=NONE
 hi StatusLine  guifg=#f8f8f8 ctermfg=15 guibg=#3f3f3f ctermbg=237 gui=bold
 hi StatusLineNC  guifg=#f8f8f8 ctermfg=15 guibg=#3f3f3f ctermbg=237 gui=NONE cterm=NONE
-hi TabLine  guifg=#f8f8f8 ctermfg=15 guibg=#3f3f3f ctermbg=237 gui=NONE cterm=NONE
-hi TabLineFill  guifg=#f8f8f8 ctermfg=15 guibg=#3f3f3f ctermbg=237 gui=NONE cterm=NONE
-hi TabLineSel  guifg=#f8f8f8 ctermfg=15 guibg=#3f3f3f ctermbg=237 gui=bold
+hi TabLine         guifg=#1B1D1E   guibg=#DAD9BB   gui=none            ctermfg=15      ctermbg=234
+hi TabLineFill     guifg=#1B1D1E   guibg=#DAD9BB   gui=none            ctermfg=15      ctermbg=234
+hi TabLineSel      guifg=#AEEE00   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Pmenu  guifg=#9b703f ctermfg=95 guibg=NONE gui=NONE cterm=NONE
 hi PmenuSel  guifg=NONE guibg=#3c4043 ctermbg=238 gui=NONE cterm=NONE
 hi IncSearch  guifg=NONE guibg=#343a44 ctermbg=237 gui=NONE cterm=NONE
