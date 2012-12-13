@@ -27,9 +27,10 @@ let s:lightgrey = '#605958'
 let s:white = '#fffedc'
 
 if version >= 700
-  hi CursorLine guibg=#262626
-  hi CursorColumn guibg=#262626
-  hi MatchParen guifg=white guibg=#80a090 
+  hi Cursor          guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+  hi CursorIM        guifg=#F8FFF9   guibg=#AEEE00   gui=none            ctermfg=15      ctermbg=234
+  hi CursorColumn    guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+  hi CursorLine                      guibg=#1B1D1E   gui=none                            ctermbg=234 
 
   "Tabpages
   hi TabLine guifg=#a09998 guibg=#202020 
@@ -45,7 +46,11 @@ endif
 
 hi Visual guibg=#404040
 
-hi Cursor guibg=#b0d0f0
+" hi Cursor guibg=#b0d0f0
+hi Cursor          guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+hi CursorIM        guifg=#F8FFF9   guibg=#AEEE00   gui=none            ctermfg=15      ctermbg=234
+hi CursorColumn    guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+hi CursorLine                      guibg=#1B1D1E   gui=none                            ctermbg=234
 
 
 exe 'hi Normal         guifg='.s:white             .' guibg='.s:darkgrey
