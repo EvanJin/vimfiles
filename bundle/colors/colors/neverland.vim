@@ -18,7 +18,7 @@ endif
 let g:colors_name="neverland"
 
 " Setting normal before any other highlight group is a good idea
-hi Normal          guifg=#ffd7ff guibg=#121212
+hi Normal          guifg=#ffffff guibg=#121212
 
 " background might have changed to 'light', so fix it
 set background=dark
