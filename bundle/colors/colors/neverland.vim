@@ -111,9 +111,9 @@ hi CursorColumn                  guibg=#121212
 hi LineNr          guifg=#626262 guibg=#121212
 hi NonText         guifg=#121212 guibg=#121212
 
-hi TabLine         guifg=#878700 guibg=#121212
-hi TabLineFill     guifg=#121212 guibg=#121212
-hi TabLineSel      guifg=#ffd700 guibg=#1c1c1c
+hi TabLine         guifg=#1B1D1E   guibg=#DAD9BB   gui=none ctermfg=15 ctermbg=234
+hi TabLineFill     guifg=#1B1D1E   guibg=#DAD9BB   gui=none ctermfg=15 ctermbg=234
+hi TabLineSel      guifg=#AEEE00   guibg=#1B1D1E   gui=none ctermfg=15 ctermbg=234
 
 
 if &t_Co > 255
