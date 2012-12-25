@@ -10,7 +10,7 @@ let g:colors_name="vilight"
 
 hi Normal         guifg=#b6b6b6           guibg=#212121
 hi Cursor         guifg=#212121           guibg=#9ca9b7
-hi CursorLine	  guifg=#ffffff		      guibg=#6c8095
+hi CursorLine	  guifg=NONE		      guibg=NONE 
 hi Directory      guifg=#6c8095            guibg=NONE
 hi VertSplit      guifg=#b6b6b6           guibg=#a6a6a6
 hi Folded         guifg=#9ca9b7           guibg=NONE        gui=italic
@@ -104,3 +104,31 @@ hi DiffAdd        guifg=#8f9d6a          guibg=NONE
 hi DiffChange     guifg=#cda869          guibg=NONE
 hi DiffText       guifg=#b6b6b6          guibg=NONE
 hi DiffDelete     guifg=#cf6a4c          guibg=NONE
+
+" ruby
+hi rubyClass  guifg=#cda869 ctermfg=179 guibg=NONE gui=NONE cterm=NONE
+hi rubyFunction  guifg=#9b703f ctermfg=95 guibg=NONE gui=NONE cterm=NONE
+hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE cterm=NONE
+hi rubySymbol  guifg=#cf6a4c ctermfg=167 guibg=NONE gui=NONE cterm=NONE
+hi rubyConstant  guifg=#9b859d ctermfg=246 guibg=NONE gui=NONE cterm=NONE
+hi rubyStringDelimiter  guifg=#8f9d6a ctermfg=107 guibg=NONE gui=NONE cterm=NONE
+hi rubyBlockParameter  guifg=#7587a6 ctermfg=103 guibg=NONE gui=NONE cterm=NONE
+hi rubyInstanceVariable  guifg=#7587a6 ctermfg=103 guibg=NONE gui=NONE cterm=NONE
+hi rubyInclude  guifg=#cda869 ctermfg=179 guibg=NONE gui=NONE cterm=NONE
+hi rubyGlobalVariable  guifg=#7587a6 ctermfg=103 guibg=NONE gui=NONE cterm=NONE
+hi rubyRegexp  guifg=#e9c062 ctermfg=179 guibg=NONE gui=NONE cterm=NONE
+hi rubyRegexpDelimiter  guifg=#e9c062 ctermfg=179 guibg=NONE gui=NONE cterm=NONE
+hi rubyEscape  guifg=#cf6a4c ctermfg=167 guibg=NONE gui=NONE cterm=NONE
+hi rubyControl  guifg=#cda869 ctermfg=179 guibg=NONE gui=NONE cterm=NONE
+hi rubyClassVariable  guifg=#7587a6 ctermfg=103 guibg=NONE gui=NONE cterm=NONE
+hi rubyOperator  guifg=#cda869 ctermfg=179 guibg=NONE gui=NONE cterm=NONE
+hi rubyException  guifg=#cda869 ctermfg=179 guibg=NONE gui=NONE cterm=NONE
+hi rubyPseudoVariable  guifg=#7587a6 ctermfg=103 guibg=NONE gui=NONE cterm=NONE
+hi rubyRailsUserClass  guifg=#9b859d ctermfg=246 guibg=NONE gui=NONE cterm=NONE
+hi rubyRailsARAssociationMethod  guifg=#dad085 ctermfg=186 guibg=NONE gui=NONE cterm=NONE
+hi rubyRailsARMethod  guifg=#dad085 ctermfg=186 guibg=NONE gui=NONE cterm=NONE
+hi rubyRailsRenderMethod  guifg=#dad085 ctermfg=186 guibg=NONE gui=NONE cterm=NONE
+hi rubyRailsMethod  guifg=#dad085 ctermfg=186 guibg=NONE gui=NONE cterm=NONE
+hi erubyDelimiter  guifg=NONE guibg=NONE gui=NONE cterm=NONE
+hi erubyComment  guifg=#5f5a60 ctermfg=59 guibg=NONE gui=italic
+hi erubyRailsMethod  guifg=#dad085 ctermfg=186 guibg=NONE gui=NONE cterm=NONE
