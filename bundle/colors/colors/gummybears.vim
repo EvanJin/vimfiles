@@ -140,12 +140,15 @@ hi Special     guifg=#458c27 guibg=NONE    gui=NONE   ctermfg=31 ctermbg=NONE ct
 hi Delimiter   guifg=#668799 guibg=NONE    gui=NONE   ctermfg=74  ctermbg=NONE cterm=NONE
 hi Operator    guifg=#6ab6ba guibg=NONE    gui=NONE   ctermfg=44 ctermbg=NONE cterm=NONE
 
+
 " VimDiff colors
 hi DiffAdd     guifg=#fcfcfc guibg=#034a08    gui=NONE   ctermfg=250 ctermbg=22 cterm=NONE
 hi DiffChange  guifg=#e8e8d3 guibg=#65337a    gui=ITALIC   ctermfg=250 ctermbg=93 cterm=NONE
 hi DiffDelete  guifg=#ff0000 guibg=#330000    gui=NONE   ctermfg=1 ctermbg=88 cterm=NONE
 hi DiffText    guifg=#000000 guibg=#b84fb8    gui=NONE   ctermfg=232 ctermbg=207 cterm=NONE
-
+hi TabLine     guifg=#1B1D1E   guibg=#DAD9BB   gui=none            ctermfg=15      ctermbg=234
+hi TabLineFill guifg=#1B1D1E   guibg=#DAD9BB   gui=none            ctermfg=15      ctermbg=234
+hi TabLineSel  guifg=#AEEE00   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Character   guifg=#cf6a4c guibg=NONE    gui=NONE   ctermfg=209 ctermbg=NONE cterm=NONE
 hi Boolean     guifg=#8197bf guibg=NONE    gui=NONE   ctermfg=75 ctermbg=NONE cterm=NONE
 hi Repeat      guifg=#ffb964 guibg=NONE    gui=NONE   ctermfg=166 ctermbg=NONE cterm=NONE
