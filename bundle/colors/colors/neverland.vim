@@ -18,7 +18,7 @@ endif
 let g:colors_name="neverland"
 
 " Setting normal before any other highlight group is a good idea
-hi Normal          guifg=#ffffff guibg=#121212
+hi Normal ctermfg=224 ctermbg=235 cterm=NONE guifg=#ede0ce guibg=#2b2a27 gui=NONE
 
 " background might have changed to 'light', so fix it
 set background=dark
@@ -51,7 +51,7 @@ hi Identifier      guifg=#afd75f
 hi Ignore          guifg=#808080 guibg=#080808
 hi IncSearch       guifg=#d7ffaf guibg=#000000
 
-hi Keyword         guifg=#87afff               gui=none
+hi Keyword         guifg=#ede0ce               gui=none
 hi Label           guifg=#ffffaf               gui=none
 hi Macro           guifg=#d7ffaf
 hi SpecialKey      guifg=#5fd7ff
@@ -106,7 +106,7 @@ hi WildMenu        guifg=#5fd7ff guibg=#000000
 
 hi Comment         guifg=#af875f
 hi ColorColumn                   guibg=#262626
-hi CursorLine                    guibg=#1c1c1c gui=none
+hi CursorLine                    guibg=#2b2a27 gui=none
 hi CursorColumn                  guibg=#121212
 hi LineNr          guifg=#626262 guibg=#121212
 hi NonText         guifg=#121212 guibg=#121212

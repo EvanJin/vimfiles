@@ -140,6 +140,10 @@ hi Special     guifg=#458c27 guibg=NONE    gui=NONE   ctermfg=31 ctermbg=NONE ct
 hi Delimiter   guifg=#668799 guibg=NONE    gui=NONE   ctermfg=74  ctermbg=NONE cterm=NONE
 hi Operator    guifg=#6ab6ba guibg=NONE    gui=NONE   ctermfg=44 ctermbg=NONE cterm=NONE
 
+hi TabLine         guifg=#1B1D1E   guibg=#DAD9BB   gui=none ctermfg=15 ctermbg=234
+hi TabLineFill     guifg=#1B1D1E   guibg=#DAD9BB   gui=none ctermfg=15 ctermbg=234
+hi TabLineSel      guifg=#AEEE00   guibg=#1B1D1E   gui=none ctermfg=15 ctermbg=234
+
 " VimDiff colors
 hi DiffAdd     guifg=#fcfcfc guibg=#034a08    gui=NONE   ctermfg=250 ctermbg=22 cterm=NONE
 hi DiffChange  guifg=#e8e8d3 guibg=#65337a    gui=ITALIC   ctermfg=250 ctermbg=93 cterm=NONE
