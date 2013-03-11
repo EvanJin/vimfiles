@@ -87,12 +87,12 @@ hi  LineNr       guifg=#3a3a3a guibg=#000000 gui=NONE      ctermfg=237   ctermbg
 
 hi  VertSplit    guifg=#303030 guibg=#303030 gui=NONE      ctermfg=236   ctermbg=236  cterm=NONE
 hi  StatusLine   guifg=#9cffd3 guibg=#202020 gui=NONE      ctermfg=85    ctermbg=234  cterm=NONE
-hi  StatusLineNC guifg=#000000 guibg=#202020 gui=bold      ctermfg=0     ctermbg=234  cterm=BOLD
+hi  StatusLineNC guifg=#000000 guibg=#202020 gui=bold      ctermfg=0     ctermbg=234  cterm=NONE
 
 hi  FoldColumn   guifg=#a8a8a8 guibg=#444444 gui=NONE      ctermfg=248   ctermbg=238  cterm=NONE
 hi  Folded       guifg=#a8a8a8 guibg=#444444 gui=NONE      ctermfg=248   ctermbg=238  cterm=NONE
 
-hi  Title        guifg=#5f87d7 guibg=NONE    gui=BOLD,ITALIC      ctermfg=67     ctermbg=NONE cterm=BOLD
+hi  Title        guifg=#5f87d7 guibg=NONE    gui=NONE,NONE      ctermfg=67     ctermbg=NONE cterm=NONE
 hi  Visual       guifg=NONE    guibg=#262D51 gui=NONE      ctermfg=NONE  ctermbg=237  cterm=NONE
 
 hi  SpecialKey   guifg=#4e4e4e guibg=#000000 gui=NONE      ctermfg=239   ctermbg=0    term=NONE
@@ -101,21 +101,21 @@ hi  WildMenu     guifg=#008700 guibg=#ffff00 gui=NONE      ctermfg=28    ctermbg
 hi  PmenuSbar    guifg=#000000 guibg=#ffffff gui=NONE      ctermfg=0     ctermbg=15   cterm=NONE
 
 hi  Error        guifg=NONE    guibg=NONE    gui=UNDERCURL guisp=#FF6C60 ctermfg=15   ctermbg=88    cterm=NONE
-hi  ErrorMsg     guifg=#ffffff guibg=#870000  gui=BOLD      ctermfg=15    ctermbg=88   cterm=BOLD
-hi  WarningMsg   guifg=#ffffff guibg=#ff5f5f  gui=BOLD      ctermfg=15    ctermbg=203  cterm=BOLD
+hi  ErrorMsg     guifg=#ffffff guibg=#870000  gui=NONE      ctermfg=15    ctermbg=88   cterm=NONE
+hi  WarningMsg   guifg=#ffffff guibg=#ff5f5f  gui=NONE      ctermfg=15    ctermbg=203  cterm=NONE
 
 hi Directory       guifg=#ffff87 guibg=NONE    gui=NONE   ctermfg=228 ctermbg=NONE cterm=NONE
 hi LocalVariable   guifg=#875f87 guibg=NONE    gui=NONE   ctermfg=96  ctermbg=NONE cterm=NONE
 hi Question        guifg=#87afff guibg=NONE    gui=NONE   ctermfg=111 ctermbg=NONE cterm=NONE
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg       guifg=#000000  guibg=#8787ff gui=BOLD     ctermfg=0 ctermbg=105 cterm=BOLD
+hi ModeMsg       guifg=#000000  guibg=#8787ff gui=NONE     ctermfg=0 ctermbg=105 cterm=NONE
 "}}}
 " Vim 7.x specific colors"{{{
 if version >= 700
   hi CursorLine   guifg=NONE    guibg=#000000 gui=NONE      ctermfg=NONE ctermbg=16  cterm=NONE
-  hi CursorColumn guifg=NONE    guibg=#121212 gui=NONE      ctermfg=NONE ctermbg=233 cterm=BOLD
-  hi MatchParen   guifg=#afff00 guibg=#af00ff gui=BOLD      ctermfg=154  ctermbg=129 cterm=BOLD
+  hi CursorColumn guifg=NONE    guibg=#121212 gui=NONE      ctermfg=NONE ctermbg=233 cterm=NONE
+  hi MatchParen   guifg=#afff00 guibg=#af00ff gui=NONE      ctermfg=154  ctermbg=129 cterm=NONE
   hi Pmenu        guifg=#e5e5e5 guibg=#444444 gui=NONE      ctermfg=7    ctermbg=238 cterm=NONE
   hi PmenuSel     guifg=#000000 guibg=#d7d787 gui=NONE      ctermfg=0    ctermbg=186 cterm=NONE
   hi Search       guifg=#d787d7 guibg=#5f005f gui=UNDERLINE ctermfg=176  ctermbg=53  cterm=underline
@@ -124,21 +124,21 @@ endif
 hi IncSearch      guifg=#1c1c1c guibg=#00d7ff gui=NONE   ctermfg=234 ctermbg=45 cterm=NONE
 "}}}
 " Syntax highlighting"{{{
-hi Comment     guifg=#585858 guibg=NONE    gui=ITALIC ctermfg=240 ctermbg=NONE cterm=NONE
+hi Comment     guifg=#585858 guibg=NONE    gui=NONE ctermfg=240 ctermbg=NONE cterm=NONE
 hi String      guifg=#afaf5f guibg=NONE    gui=NONE   ctermfg=143 ctermbg=NONE cterm=NONE
 hi Number      guifg=#af5f00 guibg=NONE    gui=NONE   ctermfg=130 ctermbg=NONE cterm=NONE
 
-hi Keyword     guifg=#ffaf00 guibg=NONE    gui=ITALIC ctermfg=214 ctermbg=NONE cterm=BOLD
-hi PreProc     guifg=#00afd7 guibg=NONE    gui=BOLD   ctermfg=38  ctermbg=NONE cterm=BOLD
+hi Keyword     guifg=#ffaf00 guibg=NONE    gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
+hi PreProc     guifg=#00afd7 guibg=NONE    gui=NONE   ctermfg=38  ctermbg=NONE cterm=NONE
 hi Conditional guifg=#ffd75f guibg=NONE    gui=NONE   ctermfg=222 ctermbg=NONE cterm=NONE
 
-hi Todo        guifg=#87005f guibg=#ffff5f gui=BOLD,UNDERLINE   ctermfg=89  ctermbg=227  cterm=BOLD
-hi Constant    guifg=#d75f5f guibg=NONE    gui=BOLD,ITALIC ctermfg=167 ctermbg=NONE cterm=BOLD
+hi Todo        guifg=#87005f guibg=#ffff5f gui=NONE,UNDERLINE   ctermfg=89  ctermbg=227  cterm=NONE
+hi Constant    guifg=#d75f5f guibg=NONE    gui=NONE,NONE ctermfg=167 ctermbg=NONE cterm=NONE
 
 hi Identifier  guifg=#8787d7 guibg=NONE    gui=NONE   ctermfg=104 ctermbg=NONE cterm=NONE
-hi Function    guifg=#d78787 guibg=NONE    gui=BOLD   ctermfg=174 ctermbg=NONE cterm=BOLD
-hi Type        guifg=#d78700 guibg=NONE    gui=BOLD,ITALIC   ctermfg=172 ctermbg=NONE cterm=BOLD
-hi Statement   guifg=#87af5f guibg=NONE    gui=ITALIC   ctermfg=107 ctermbg=NONE cterm=NONE
+hi Function    guifg=#d78787 guibg=NONE    gui=NONE   ctermfg=174 ctermbg=NONE cterm=NONE
+hi Type        guifg=#d78700 guibg=NONE    gui=NONE,NONE   ctermfg=172 ctermbg=NONE cterm=NONE
+hi Statement   guifg=#87af5f guibg=NONE    gui=NONE   ctermfg=107 ctermbg=NONE cterm=NONE
 
 hi Special     guifg=#5faf00 guibg=NONE    gui=NONE   ctermfg=70 ctermbg=NONE cterm=NONE
 hi Delimiter   guifg=#5fafd7 guibg=NONE    gui=NONE   ctermfg=74  ctermbg=NONE cterm=NONE
@@ -172,9 +172,9 @@ hi link VisualNOS   Ignore
 "}}}
 " VimDiff colors"{{{
 hi DiffAdd     guifg=#bcbcbc guibg=#005f00    gui=NONE   ctermfg=250 ctermbg=22 cterm=NONE
-hi DiffChange  guifg=#bcbcbc guibg=#875fd7    gui=ITALIC ctermfg=250 ctermbg=98 cterm=NONE
+hi DiffChange  guifg=#bcbcbc guibg=#875fd7    gui=NONE ctermfg=250 ctermbg=98 cterm=NONE
 hi DiffDelete  guifg=#d7afff guibg=#870000    gui=NONE   ctermfg=183 ctermbg=88 cterm=NONE
-hi DiffText    guifg=#080808 guibg=#ff5fff    gui=BOLD   ctermfg=232 ctermbg=207 cterm=BOLD
+hi DiffText    guifg=#080808 guibg=#ff5fff    gui=NONE   ctermfg=232 ctermbg=207 cterm=NONE
 "}}}
 " Spelling"{{{
 hi SpellBad     guisp=#d70000       ctermfg=bg     ctermbg=160       gui=undercurl cterm=REVERSE
@@ -219,7 +219,7 @@ hi link CTagsMember           htmlString
 	hi link rubyConstant          Type
 	"}}}
 	" Special for HTML"{{{
-	hi htmlH1        guifg=#00afd7 guibg=NONE gui=UNDERLINE ctermfg=38  ctermbg=NONE cterm=BOLD
+	hi htmlH1        guifg=#00afd7 guibg=NONE gui=UNDERLINE ctermfg=38  ctermbg=NONE cterm=NONE
 	hi htmlLink      guifg=#d7d75f guibg=NONE gui=NONE      ctermfg=185 ctermbg=NONE cterm=NONE
 	hi htmlString    guifg=#87875f guibg=NONE gui=NONE      ctermfg=101 ctermbg=NONE cterm=NONE
 	hi htmlTagName   guifg=#d7afd7 guibg=NONE gui=NONE      ctermfg=182 ctermbg=NONE cterm=NONE
@@ -235,7 +235,7 @@ hi link CTagsMember           htmlString
 	hi link xmlEndTag       Identifier
 	"}}}
 	" Special for CSS"{{{
-	hi cssTagName guifg=#70a8dd gui=BOLD  ctermfg=74 cterm=BOLD
+	hi cssTagName guifg=#70a8dd gui=NONE  ctermfg=74 cterm=NONE
 	hi cssBoxProp guifg=#d0af76  gui=NONE  ctermfg=180 gui=NONE
 	hi link cssColorProp cssBoxProp
 	hi link cssFontProp cssBoxProp
@@ -245,24 +245,24 @@ hi link CTagsMember           htmlString
 	"}}}
 	" Special for Markdown"{{{
 	hi markdownUrl       guifg=#af8787 guibg=NONE gui=NONE      ctermfg=138 ctermbg=NONE cterm=NONE
-	hi markdownCode      guibg=#3a3a3a guifg=#a7bee4 gui=BOLD ctermbg=237 ctermfg=152 cterm=BOLD
+	hi markdownCode      guibg=#3a3a3a guifg=#a7bee4 gui=NONE ctermbg=237 ctermfg=152 cterm=NONE
 	hi markdownCodeBlock guifg=#c5b1e4 ctermfg=182
 	hi markdownLinkText  guifg=#0087af gui=UNDERLINE ctermfg=31
 
-	hi markdownH1        guifg=#d75f00 guibg=NONE gui=BOLD,ITALIC,UNDERLINE ctermfg=166  ctermbg=NONE cterm=BOLD
-	hi markdownH2        guifg=#d75f87 guibg=NONE gui=BOLD,UNDERLINE ctermfg=168  ctermbg=NONE cterm=BOLD
-	hi markdownH3        guifg=#d78787 guibg=NONE gui=ITALIC,UNDERLINE ctermfg=174  ctermbg=NONE cterm=BOLD
+	hi markdownH1        guifg=#d75f00 guibg=NONE gui=NONE,NONE,UNDERLINE ctermfg=166  ctermbg=NONE cterm=NONE
+	hi markdownH2        guifg=#d75f87 guibg=NONE gui=NONE,UNDERLINE ctermfg=168  ctermbg=NONE cterm=NONE
+	hi markdownH3        guifg=#d78787 guibg=NONE gui=NONE,UNDERLINE ctermfg=174  ctermbg=NONE cterm=NONE
 
-	hi markdownBold    guifg=#ffd75f guibg=NONE gui=BOLD      ctermfg=221 ctermbg=NONE cterm=BOLD
-	hi markdownItalic    guifg=#afff87 guibg=NONE gui=ITALIC      ctermfg=156 ctermbg=NONE cterm=NONE
+	hi markdownBold    guifg=#ffd75f guibg=NONE gui=NONE      ctermfg=221 ctermbg=NONE cterm=NONE
+	hi markdownItalic    guifg=#afff87 guibg=NONE gui=NONE      ctermfg=156 ctermbg=NONE cterm=NONE
 
-	hi markdownOrderedListMarker  guifg=#5fff00  gui=BOLD ctermfg=82 cterm=BOLD
-	hi markdownListMarker  guifg=#ffff00  gui=BOLD ctermfg=226 cterm=BOLD
+	hi markdownOrderedListMarker  guifg=#5fff00  gui=NONE ctermfg=82 cterm=NONE
+	hi markdownListMarker  guifg=#ffff00  gui=NONE ctermfg=226 cterm=NONE
 
-	hi markdownBlockQuote   guifg=#00ffff gui=BOLD ctermfg=14 cterm=BOLD
+	hi markdownBlockQuote   guifg=#00ffff gui=NONE ctermfg=14 cterm=NONE
 	"}}}
 	" Special for Javascript"{{{
-	hi JavaScriptStrings          guifg=#26b3ac guibg=NONE gui=ITALIC ctermfg=45  ctermbg=NONE  cterm=NONE
+	hi JavaScriptStrings          guifg=#26b3ac guibg=NONE gui=NONE ctermfg=45  ctermbg=NONE  cterm=NONE
 	hi link javaScriptNumber      Number
 	hi link javaScript  Normal
 	hi link javaScriptBrowserObjects PreProc
@@ -270,10 +270,10 @@ hi link CTagsMember           htmlString
 	"}}}
 	" Special for Python"{{{
 	"hi  link pythonEscape         Keyword
-	hi pythonBuiltin          guifg=#50bf95 guibg=NONE  gui=ITALIC ctermfg=42  cterm=UNDERLINE
+	hi pythonBuiltin          guifg=#50bf95 guibg=NONE  gui=NONE ctermfg=42  cterm=UNDERLINE
 	"}}}
 	" Special for PHP"{{{
-	hi phpDefine  guifg=#ffc795    gui=BOLD ctermfg=209 cterm=BOLD
+	hi phpDefine  guifg=#ffc795    gui=NONE ctermfg=209 cterm=NONE
 	hi phpStringSingle  guifg=#e8e8d3 guibg=NONE gui=NONE ctermfg=250 ctermbg=NONE  cterm=NONE
 	hi link phpStringDouble Ignore
 	"}}}
