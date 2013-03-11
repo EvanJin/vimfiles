@@ -27,10 +27,10 @@ highlight FoldColumn guifg=#0033ff guibg=#333333 ctermfg=21 ctermbg=236
 highlight Folded guifg=#6666ff guibg=#223344 ctermfg=63 ctermbg=236
 highlight Identifier guifg=#00a0e0 ctermfg=39
 highlight Ignore gui=NONE cterm=NONE
-highlight IncSearch guifg=#99ff99 guibg=#3454ff gui=bold,reverse ctermfg=120 ctermbg=27 cterm=bold,reverse
+highlight IncSearch guifg=#99ff99 guibg=#3454ff gui=NONE,reverse ctermfg=120 ctermbg=27 cterm=NONE,reverse
 highlight LineNr guifg=#446699 ctermfg=25
 highlight MatchParen guifg=#99ff99 guibg=#112233 ctermfg=120 ctermbg=234
-highlight ModeMsg guifg=#aaaa3c guibg=#222211 gui=bold ctermfg=142 ctermbg=235 cterm=bold
+highlight ModeMsg guifg=#aaaa3c guibg=#222211 gui=NONE ctermfg=142 ctermbg=235 cterm=NONE
 highlight MoreMsg guifg=#ffff00 ctermfg=226
 highlight NonText guifg=#8400ff guibg=#102030 ctermfg=93 ctermbg=234
 highlight Normal guifg=#eeeeee guibg=#112233 ctermfg=255 ctermbg=234
@@ -39,7 +39,7 @@ highlight PmenuSbar guibg=#113355 ctermbg=236
 highlight PmenuSel guifg=#80ff00 guibg=#1a1a1a ctermfg=118 ctermbg=234
 highlight PmenuThumb gui=reverse cterm=reverse
 highlight PreProc guifg=#ff99ff ctermfg=213
-highlight Question guifg=#009966 guibg=#113322 gui=bold ctermfg=29 ctermbg=236 cterm=bold
+highlight Question guifg=#009966 guibg=#113322 gui=NONE ctermfg=29 ctermbg=236 cterm=NONE
 highlight Search guifg=#3404ff guibg=#ffff00 ctermfg=21 ctermbg=226
 highlight SignColumn guifg=#00ffff guibg=#c0c0c0 ctermfg=51 ctermbg=250
 highlight Special guifg=#ff00ff ctermfg=201
@@ -55,7 +55,7 @@ highlight TabLine guifg=#0066ff guibg=#001133 ctermfg=27 ctermbg=17
 highlight TabLineFill gui=NONE cterm=NONE
 highlight TabLineSel guifg=#999944 guibg=#112233 gui=underline ctermfg=143 ctermbg=234 cterm=underline
 highlight Title guifg=#ffff44 ctermfg=227
-highlight Todo guifg=#ff0000 guibg=#112233 gui=bold,underline ctermfg=196 ctermbg=234 cterm=bold,underline
+highlight Todo guifg=#ff0000 guibg=#112233 gui=NONE,underline ctermfg=196 ctermbg=234 cterm=NONE,underline
 highlight Type guifg=#ff9933 ctermfg=208
 highlight Underlined gui=underline cterm=underline
 highlight VertSplit guifg=#00c4ff guibg=#0000ff gui=reverse ctermfg=81 ctermbg=21 cterm=reverse

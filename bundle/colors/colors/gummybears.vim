@@ -82,7 +82,9 @@ endif
 hi  Normal       guifg=#c6c6c6 guibg=#262626 gui=NONE      ctermfg=251   ctermbg=235  cterm=NONE
 hi  NonText      guifg=#ff00ff guibg=#000000 gui=NONE      ctermfg=13    ctermbg=0    cterm=NONE
 
-hi  Cursor       guifg=#000000 guibg=#ffff00 gui=NONE      ctermfg=0     ctermbg=11   cterm=reverse
+
+hi  Cursor       guifg=#ffffff guibg=#335577 gui=NONE      ctermfg=231   ctermbg=24   cterm=reverse
+" hi  Cursor       guifg=#000000 guibg=#ffff00 gui=NONE      ctermfg=0     ctermbg=11   cterm=reverse // orginal
 hi  LineNr       guifg=#3a3a3a guibg=#000000 gui=NONE      ctermfg=237   ctermbg=0    cterm=NONE
 
 hi  VertSplit    guifg=#303030 guibg=#303030 gui=NONE      ctermfg=236   ctermbg=236  cterm=NONE
