@@ -67,14 +67,14 @@ hi Character      guifg=#E9C062
 hi Number         guifg=#FF7C9D
 hi Boolean        guifg=#FF7C9D
 hi Float          guifg=#FF7C9D
-hi Identifier     guifg=#FFEF92 gui=bold"#FF99E7"#FFEF92
-hi Function       guifg=#FFEF92 gui=bold"#FFAD51
-hi Statement      guifg=#FF9D00 gui=bold 
-hi Conditional    guifg=#FF9D00 gui=bold 
+hi Identifier     guifg=#FFEF92 gui=NONE"#FF99E7"#FFEF92
+hi Function       guifg=#FFEF92 gui=NONE"#FFAD51
+hi Statement      guifg=#FF9D00 gui=NONE
+hi Conditional    guifg=#FF9D00 gui=NONE
 hi Repeat         guifg=khaki
 hi Label          guifg=#E9C062
-hi Operator       guifg=#FFAC00 gui=bold 
-hi Keyword        guifg=#FF7C9D gui=bold "#E9C062
+hi Operator       guifg=#FFAC00 gui=NONE
+hi Keyword        guifg=#FF7C9D gui=NONE "#E9C062
 hi Exception      guifg=khaki
 hi PreProc        guifg=khaki4
 hi Include        guifg=#A9C4D5 "Import
