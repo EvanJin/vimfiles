@@ -1,103 +1,145 @@
-" ==============================================================================
-"        File: cobalt.vim
-"      Author: David Terei <davidterei@gmail.com>
-"		    URL: http://www.vim.org/scripts/script.php?script_id=2828
-" Last Change: Thu Feb 03 13:44:07 PST 2011
-"     Version: 1.2
-"     License: Distributed under the Vim charityware license.
-"     Summary: A colour scheme for Vim attempting to replicate TextMates
-"              cobalt scheme.
-"
-" GetLatestVimScripts: 2828 1 :AutoInstall: cobalt.vim
-"
-" Description:
-" A colour scheme for Vim that attempts to replicate TextMates cobalt colour
-" scheme. This scheme only supports GVim, it should work fine in Vim but no
-" promises are made about this or how it looks.
-"
-" History:
-"   Wed Oct 28, 2009 - 1.0:
-"     * Initial release.
-"   Thu Feb 03, 2011 - 1.2:
-"     * Tweaks by David Terei
-"     * Tweaks by Константин Городинский <gor.konstantin@gmail.com>
-"
+" Vim color file
+" Converted from Textmate theme Cobalt using Coloration v0.2.5 (http://github.com/sickill/coloration)
 
 set background=dark
-hi clear
+highlight clear
 
 if exists("syntax_on")
-    syntax reset
+  syntax reset
 endif
 
-let g:colors_name="cobalt"
+let g:colors_name = "Cobalt"
 
-hi Normal         guifg=#FFFFFF           guibg=#002F52  
-hi NonText        guifg=#FFFFFF           guibg=#002F52
-hi CursorLine     guifg=NONE              guibg=#002943
-hi Cursor         guifg=#F8F8F8           guibg=#A7A7A7
-hi CursorIM       guifg=#F8F8F8           guibg=#002947"#5F5A60
-hi Directory      guifg=#8F9D6A           guibg=#141414
-hi ErrorMsg       guifg=#CF6A4C           guibg=#420E09
-hi VertSplit      guifg=#AC885B           guibg=#FFFFFF
-hi Folded         guifg=#F9EE98           guibg=#494949
+hi Cursor  guifg=NONE guibg=#ffffff gui=NONE
+hi Visual  guifg=NONE guibg=#93664d gui=NONE
+hi CursorLine  guifg=NONE guibg=NONE gui=NONE
+hi CursorColumn  guifg=NONE guibg=#000622 gui=NONE
+hi LineNr  guifg=#888888 guibg=#e3e3e3 gui=NONE
+hi VertSplit  guifg=#30385b guibg=#30385b gui=NONE
+hi MatchParen  guifg=#F6AA11 guibg=NONE gui=NONE
+hi StatusLine  guifg=#ffffff guibg=#30385b gui=bold
+hi StatusLineNC  guifg=#ffffff guibg=#30385b gui=NONE
+hi Pmenu  guifg=#ffdd00 guibg=NONE gui=NONE
+hi PmenuSel  guifg=NONE guibg=#844d38 gui=NONE
+hi IncSearch  guifg=NONE guibg=#434966 gui=NONE
+hi Search  guifg=NONE guibg=#434966 gui=NONE
+hi Directory  guifg=#ff628c guibg=NONE gui=italic
+hi Folded  guifg=#0088ff guibg=#000934 gui=NONE
 
-hi IncSearch      guifg=#000000           guibg=#CF6A4C
-hi LineNr         guifg=#59809d           guibg=#003454 "espresso style
-"hi LineNr         guifg=#888888           guibg=#e1e1e1 "textmate default
-"hi LineNr         guifg=#7587A6           guibg=#000000 "own style
-hi ModeMsg        guifg=#CF7D34           guibg=#E9C062
-hi MoreMsg        guifg=#CF7D34           guibg=#E9C062
-hi Question       guifg=#7587A6           guibg=#0E2231
-hi Search         guifg=#420E09           guibg=#CF6A4C
-hi SpecialKey     guifg=#CF7D34           guibg=#141414
-hi StatusLine     guifg=#0E2231           guibg=#8693A5
-hi StatusLineNC   guifg=#7587A6           guibg=#F8F8F8
-hi Title          guifg=#8B98AB           guibg=#0E2231
-hi Visual         guifg=#FFFFFF           guibg=#B36539
-hi WarningMsg     guifg=#CF6A4C           guibg=#420E09
-hi WildMenu       guifg=#AFC4DB           guibg=#0E2231
+hi Normal  guifg=#ffffff guibg=#002f52 gui=NONE
+hi Boolean  guifg=#ff628c guibg=NONE gui=italic
+hi Character  guifg=#ff628c guibg=NONE gui=italic
+hi Comment  guifg=#0088ff guibg=NONE gui=italic
+hi Conditional  guifg=#F6AA11 guibg=NONE gui=NONE
+hi Constant  guifg=#ff628c guibg=NONE gui=italic
+hi Define  guifg=#F6AA11 guibg=NONE gui=NONE
+hi ErrorMsg  guifg=#f8f8f8 guibg=#800f00 gui=NONE
+hi WarningMsg  guifg=#f8f8f8 guibg=#800f00 gui=NONE
+hi Float  guifg=#ff628c guibg=NONE gui=italic
+hi Function  guifg=#ffdd00 guibg=NONE gui=NONE
+hi Identifier  guifg=#F6F080 guibg=NONE gui=NONE
+hi Keyword  guifg=#F6AA11 guibg=NONE gui=NONE
+hi Label  guifg=#3ad900 guibg=NONE gui=NONE
+hi NonText  guifg=#242b50 guibg=#002f52 gui=NONE
+hi Number  guifg=#ff628c guibg=NONE gui=italic
+hi Operator  guifg=#F6AA11 guibg=NONE gui=NONE
+hi PreProc  guifg=#F6AA11 guibg=NONE gui=NONE
+hi Special  guifg=#ffffff guibg=NONE gui=NONE
+hi SpecialKey  guifg=#242b50 guibg=NONE gui=NONE
+hi Statement  guifg=#F6AA11 guibg=NONE gui=NONE
+hi StorageClass  guifg=#F6F080 guibg=NONE gui=NONE
+hi String  guifg=#3ad900 guibg=NONE gui=NONE
+hi Tag  guifg=#ffdd00 guibg=NONE gui=NONE
+hi Title  guifg=#ffffff guibg=NONE gui=bold
+hi Todo  guifg=#0088ff guibg=NONE gui=inverse,bold,italic
+hi Type  guifg=#ffdd00 guibg=NONE gui=NONE
+hi Underlined  guifg=NONE guibg=NONE gui=underline
 
-"Syntax highlight groups
+hi HighlightedBlock guibg=#2d4557
+hi SignColumn guibg=#e3e3e3
 
-hi Comment        guifg=#009DFF gui=italic
-hi Constant       guifg=#E77E6E
-hi String         guifg=#3AD900
-hi Character      guifg=#E9C062
-hi Number         guifg=#FF7C9D
-hi Boolean        guifg=#FF7C9D
-hi Float          guifg=#FF7C9D
-hi Identifier     guifg=#FFEF92 gui=NONE"#FF99E7"#FFEF92
-hi Function       guifg=#FFEF92 gui=NONE"#FFAD51
-hi Statement      guifg=#FF9D00 gui=NONE
-hi Conditional    guifg=#FF9D00 gui=NONE
-hi Repeat         guifg=khaki
-hi Label          guifg=#E9C062
-hi Operator       guifg=#FFAC00 gui=NONE
-hi Keyword        guifg=#FF7C9D gui=NONE "#E9C062
-hi Exception      guifg=khaki
-hi PreProc        guifg=khaki4
-hi Include        guifg=#A9C4D5 "Import
-hi Define         guifg=khaki1
-hi Macro          guifg=#9B703F
-hi PreCondit      guifg=#A9C4D5
-hi Type           guifg=#80FFBB gui=none"Filepath, IO, Maybe
-hi StorageClass   guifg=tan
-hi Structure      guifg=#FF9D00 "module
-hi Typedef        guifg=khaki3
-hi Special        guifg=#F2DD00
-hi SpecialChar    guifg=DarkGoldenrod
-hi Tag            guifg=DarkKhaki
-hi Delimiter      guifg=DarkGoldenrod
-hi SpecialComment guifg=cornsilk
-hi Debug          guifg=brown
-hi Underlined     guifg=#Cf6A4C
-hi Ignore         guifg=#666666
-hi Error          guifg=#CF6A4C    guibg=#420E09
-hi Todo           guifg=#7587A6    guibg=#0E2231
-hi Pmenu          guifg=#141414    guibg=#CDA869
-hi PmenuSel       guifg=#F8F8F8    guibg=#9B703F
-hi PmenuSbar      guibg=#DAEFA3
-hi PmenuThumb     guifg=#8F9D6A
+hi rubyClass  guifg=#F6AA11 guibg=NONE gui=NONE
+hi rubyFunction  guifg=#ffdd00 guibg=NONE gui=NONE
+hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE
+hi rubySymbol  guifg=#ff628c guibg=NONE gui=italic
+hi rubyConstant  guifg=#80ffbb guibg=NONE gui=NONE
+hi rubyStringDelimiter  guifg=#3ad900 guibg=NONE gui=NONE
+hi rubyBlockParameter  guifg=#cccccc guibg=NONE gui=NONE
+hi rubyInstanceVariable  guifg=#ff80e1 guibg=NONE gui=italic
+hi rubyInclude  guifg=#F6AA11 guibg=NONE gui=NONE
+hi rubyGlobalVariable  guifg=#cccccc guibg=NONE gui=NONE
+hi rubyRegexp  guifg=#80ffc2 guibg=NONE gui=NONE
+hi rubyRegexpDelimiter  guifg=#80ffc2 guibg=NONE gui=NONE
+hi rubyEscape  guifg=#ff628c guibg=NONE gui=italic
+hi rubyControl  guifg=#F6AA11 guibg=NONE gui=NONE
+hi rubyClassVariable  guifg=#cccccc guibg=NONE gui=NONE
+hi rubyOperator  guifg=#F6AA11 guibg=NONE gui=NONE
+hi rubyException  guifg=#F6AA11 guibg=NONE gui=NONE
+hi rubyPseudoVariable  guifg=#ff80e1 guibg=NONE gui=italic
+hi rubyRailsUserClass  guifg=#80ffbb guibg=NONE gui=NONE
+hi rubyRailsARAssociationMethod  guifg=#ffb146 guibg=NONE gui=NONE
+hi rubyRailsARMethod  guifg=#ffb146 guibg=NONE gui=NONE
+hi rubyRailsRenderMethod  guifg=#ffb146 guibg=NONE gui=NONE
+hi rubyRailsMethod  guifg=#ffb146 guibg=NONE gui=NONE
+hi erubyDelimiter  guifg=#e1efff guibg=NONE gui=NONE
+hi erubyComment  guifg=#0088ff guibg=NONE gui=italic
+hi erubyRailsMethod  guifg=#ffb146 guibg=NONE gui=NONE
 
+hi htmlTag  guifg=#9effff guibg=NONE gui=NONE
+hi htmlEndTag  guifg=#9effff guibg=NONE gui=NONE
+hi htmlTagName  guifg=#9effff guibg=NONE gui=NONE
+hi htmlArg  guifg=#9effff guibg=NONE gui=NONE
+hi htmlSpecialChar  guifg=#ff628c guibg=NONE gui=italic
+hi htmlSpecialTagName  guifg=#f9de00 guibg=NONE gui=NONE
 
+hi javaScriptFunction  guifg=#F6F080 guibg=NONE gui=NONE
+hi javaScriptFuncName  guifg=#f9de00 guibg=NONE gui=NONE
+hi javaScriptRailsFunction  guifg=#ffb146 guibg=#00ff00 gui=NONE
+hi javaScriptBraces  guifg=NONE guibg=NONE gui=NONE
+hi javaScriptConditional  guifg=#F6AA11 guibg=NONE gui=NONE
+hi javaScriptRepeat  guifg=#ffb146 guibg=NONE gui=NONE
+hi javaScriptNumber  guifg=#ff628c guibg=NONE gui=NONE
+hi javaScriptMember  guifg=#76ff9a guibg=NONE gui=NONE
+hi javaScriptGlobal  guifg=#76ff9a guibg=NONE gui=NONE
+hi javaScriptLabel  guifg=#f9de00 guibg=NONE gui=NONE
+hi javaScriptType  guifg=#f9de00 guibg=NONE gui=NONE
+hi javaScriptThis  guifg=#ff80e1 guibg=NONE gui=NONE
+hi javaScriptComment guifg=#0088FF guibg=NONE gui=italic
+
+syn match javaScriptObject contained "\.[A-Za-z][A-Za-z0-9_-]\+"
+syn cluster htmlJavaScript add=javaScriptObject
+hi javaScriptObject guifg=#ef9399 
+
+hi yamlKey  guifg=#ffdd00 guibg=NONE gui=NONE
+hi yamlAnchor  guifg=#cccccc guibg=NONE gui=NONE
+hi yamlAlias  guifg=#cccccc guibg=NONE gui=NONE
+hi yamlDocumentHeader  guifg=#3ad900 guibg=NONE gui=NONE
+
+hi cssURL  guifg=#cccccc guibg=NONE gui=NONE
+hi cssFunctionName  guifg=#ffb146 guibg=NONE gui=NONE
+hi cssColor  guifg=#F6F080 guibg=NONE gui=italic
+hi cssPseudoClassId  guifg=#ffdd00 guibg=NONE gui=NONE
+hi cssClassName  guifg=#1dd900 guibg=NONE gui=NONE
+hi cssValueLength  guifg=#F6F080 guibg=NONE gui=italic
+hi cssCommonAttr  guifg=#eb939a guibg=NONE gui=NONE
+hi cssBraces  guifg=#e1efff guibg=NONE gui=NONE
+hi cssIdentifier  guifg=#ffb146 guibg=NONE gui=NONE
+hi cssInclude guifg=#ff9e00 guibg=NONE gui=NONE
+hi cssTagName  guifg=#9effff guibg=NONE gui=NONE
+
+hi cssProp guifg=#9DF39F
+hi link cssFontProp cssProp
+hi link cssColorProp cssProp
+hi link cssTextProp cssProp
+hi link cssBoxProp cssProp
+hi link cssRenderProp cssProp
+hi link cssAuralProp cssProp
+hi link cssRenderProp cssProp
+hi link cssGeneratedContentProp cssProp
+hi link cssPagingProp cssProp
+hi link cssTableProp cssProp
+hi link cssUIProp cssProp
+
+hi cssFontAttr guifg=#ef9399
+
+au WinEnter * set cursorline
