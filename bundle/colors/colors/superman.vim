@@ -14,61 +14,62 @@ hi Cursor         guifg=#121212 ctermfg=233  guibg=#F8F8F0 ctermbg=255  gui=NONE
 
 " Light Blue
 hi Boolean        guifg=#4BC7f4 ctermfg=159  gui=NONE cterm=NONE
-hi Constant       guifg=#4BC7f4 ctermfg=159  gui=NONE cterm=NONE
-hi PreProc        guifg=#4BC7f4 ctermfg=159  gui=NONE cterm=NONE
+hi Constant       guifg=#4BC7f4 ctermfg=159  gui=bold cterm=bold
+hi PreProc        guifg=#4BC7f4 ctermfg=159  gui=bold cterm=bold
 
 " Light yellow
 hi Character      guifg=#C1DA86 ctermfg=229  gui=NONE cterm=NONE
 
 " Darker Yellow
 hi Identifier     guifg=#9DA81D ctermfg=142  gui=NONE cterm=NONE
-hi StorageClass   guifg=#9DA81D ctermfg=142  gui=NONE cterm=NONE
+hi StorageClass   guifg=#9DA81D ctermfg=142  gui=italic cterm=NONE
 
-hi Debug          guifg=#BCA3A3 ctermfg=248  gui=NONE cterm=NONE
+hi Debug          guifg=#BCA3A3 ctermfg=248  gui=bold cterm=bold
 hi Delimter       guifg=#8F8F8F ctermfg=245  gui=NONE cterm=NONE
 hi DiffAdd                                   guibg=#13354A ctermbg=236  gui=NONE cterm=NONE
 hi DiffChange     guifg=#89807D ctermfg=244  guibg=#4C4745 ctermbg=238  gui=NONE cterm=NONE
-hi DiffText                                  guibg=#4C4745 ctermbg=238  gui=NONE cterm=NONE
+hi DiffText                                  guibg=#4C4745 ctermbg=238  gui=italic cterm=NONE
 
 " Lighter brick
 hi Error          guifg=#FF9E80 ctermfg=210  guibg=#080808 ctermbg=232  gui=NONE cterm=NONE
 hi Conditional    guifg=#FF9E80 ctermfg=210
 
 " Darker brick
-hi ErrorMsg       guifg=#EE6E47 ctermfg=203  guibg=#232526 ctermbg=235  gui=NONE cterm=NONE
+hi ErrorMsg       guifg=#EE6E47 ctermfg=203  guibg=#232526 ctermbg=235  gui=bold cterm=bold
 hi Statement      guifg=#EE6E47 ctermfg=203
-hi Tag            guifg=#EE6E47 ctermfg=203  gui=NONE cterm=NONE
+hi Tag            guifg=#EE6E47 ctermfg=203  gui=italic cterm=NONE
 
 " Turtle Green
-hi Function       guifg=#93C05E ctermfg=148  gui=NONE cterm=NONE
+hi Function       guifg=#93C05E ctermfg=148  gui=bold cterm=bold
 hi Directory      guifg=#93C05E ctermfg=148  gui=NONE cterm=NONE
 hi SignColumn     guifg=#93C05E ctermfg=148  guibg=#232526 ctermbg=235  gui=NONE cterm=NONE
 
 " Greyblue
 hi Comment        guifg=#5F6C6F ctermfg=241
-hi SpecialComment guifg=#5F6C6F ctermfg=241  gui=NONE cterm=NONE
+hi SpecialComment guifg=#5F6C6F ctermfg=241  gui=bold cterm=bold
 
 hi Ignore         guifg=#121212 ctermfg=233  gui=NONE cterm=NONE
-hi Macro          guifg=#C4BE89 ctermfg=180  gui=NONE cterm=NONE
+hi Macro          guifg=#C4BE89 ctermfg=180  gui=italic cterm=NONE
 
 " Blue
 hi Define         guifg=#338EB3 ctermfg=33   gui=NONE cterm=NONE
 hi Type           guifg=#338EB3 ctermfg=33   gui=NONE cterm=NONE
 hi WildMenu       guifg=#338EB3 ctermfg=33   guibg=#000000 ctermbg=16   gui=NONE cterm=NONE
-hi Special        guifg=#338EB3 ctermfg=33   gui=NONE cterm=NONE
+hi Special        guifg=#338EB3 ctermfg=33   gui=italic cterm=NONE
 
-hi MatchParen     guifg=#000000 ctermfg=16   guibg=#FD971F ctermbg=208  gui=NONE cterm=NONE
+hi MatchParen     guifg=#000000 ctermfg=16   guibg=#FD971F ctermbg=208  gui=bold cterm=bold
 hi ModeMsg        guifg=#E6DB74 ctermfg=186  gui=NONE cterm=NONE
 hi PmenuSel                                  guibg=#808080 ctermbg=244  gui=NONE cterm=NONE
 hi Search         guifg=#FFFFFF ctermfg=231  guibg=#455354 ctermbg=239  gui=NONE cterm=NONE
 hi Underlined     guifg=#808080 ctermfg=244  gui=underline cterm=underline
 hi Title          guifg=#EEEEEE ctermfg=255  gui=NONE cterm=NONE
 hi Todo           guifg=#FFFFFF ctermfg=15   guibg=NONE ctermbg=NONE    gui=underline cterm=underline
-hi WarningMsg     guifg=#FFFFFF ctermfg=231  guibg=#262626 ctermbg=235  gui=NONE cterm=NONE
+hi WarningMsg     guifg=#FFFFFF ctermfg=231  guibg=#262626 ctermbg=235  gui=bold cterm=bold
 
 " == Editor Aesthetics ====================================
 
 hi VertSplit      guifg=#1C1C1C ctermfg=234  guibg=#1C1C1C ctermbg=234
+hi ColorColumn    guifg=#1C1C1C ctermfg=234  guibg=#1C1C1C ctermbg=234
 hi StatusLine     guifg=#808080 ctermfg=244  guibg=#1C1C1C ctermbg=234 gui=NONE cterm=NONE
 hi StatusLineNC   guifg=#455354 ctermfg=239  guibg=#1C1C1C ctermbg=234 gui=NONE cterm=NONE
 hi Visual         guifg=#465457 ctermfg=240  guibg=#1C1C1C ctermbg=234 gui=NONE cterm=NONE
@@ -130,12 +131,18 @@ hi link htmlEndTag              Tag
 hi link htmlTagN                Tag
 hi link htmlArg                 Function
 
-hi htmlNONENONE               gui=NONE,NONE             cterm=NONE,NONE
-hi htmlNONEUnderline            gui=NONE,underline          cterm=NONE,underline
-hi htmlNONEUnderlineNONE      gui=NONE,underline,NONE   cterm=NONE,underline,NONE
-hi htmlNONE                   gui=NONE                  cterm=NONE
+hi htmlBoldItalic               gui=bold,italic             cterm=bold,italic
+hi htmlBoldUnderline            gui=bold,underline          cterm=bold,underline
+hi htmlBoldUnderlineItalic      gui=bold,underline,italic   cterm=bold,underline,italic
+hi htmlItalic                   gui=italic                  cterm=italic
 hi htmlUnderline                gui=underline               cterm=underline
-hi htmlUnderlineNONE          gui=underline,NONE        cterm=underline,NONE
+hi htmlUnderlineItalic          gui=underline,italic        cterm=underline,italic
+
+" xml
+hi link xmlTag                  Tag
+hi link xmlTagName              Tag
+hi link xmlEndTag               Tag
+hi link xmlAttrib               Function
 
 " css
 hi link cssImportant            Error
@@ -158,25 +165,33 @@ hi link cssTableProp            Define
 hi link cssUiProp               Define
 hi link cssGeneratedContentProp Define
 
+" CartoCSS (mss)
+hi link cartoProp               Define
+hi link cartoBraces             Function
+hi link cartoValueNumber        Boolean
+hi link cartoStringQ            Boolean
+hi link cartoVariable           Tag
+
 " Ruby
 hi link rubySharpBang           Normal
 hi link rubyControl             Comment
 
 " Javascript
-hi link javaScriptNumber        Boolean
-hi link javaScriptRegexpString  Boolean
-hi link javaScriptPrototype     Type        " prototype
-hi link javaScriptType          Type        " const undefined void yield
-hi link javaScriptIdentifier    Identifier  " var this
-hi link javaScriptLabel         Label       " length
-hi link javaScriptGlobalObjects Class
-hi link javaScriptFunction      Statement
-hi link javaScriptSource        Statement   " import export
-hi link javaScriptOperator      Statement   " delete new in instanceof let typeof
-hi link javaScriptBoolean       Statement   " true false
-hi link javaScriptNull          Statement   " null
-hi link javaScriptConditional   Statement   " if else
-hi link javaScriptRepeat        Statement   " do while for
-hi link javaScriptBranch        Statement   " break continue switch case default return
-hi link javaScriptStatement     Statement   " try catch throw with finally
-hi link javascriptEnvComment    Comment     " executable
+hi link jsNumber        Boolean
+hi link jsRegexpString  Boolean
+hi link jsPrototype     Type        " prototype
+hi link jsType          Type        " const undefined void yield
+hi link jsIdentifier    Identifier  " var this
+hi link jsLabel         Label       " length
+hi link jsGlobalObjects Class
+hi link jsFunction      Statement
+hi link jsSource        Statement   " import export
+hi link jsOperator      Statement   " delete new in instanceof let typeof
+hi link jsBoolean       Statement   " true false
+hi link jsNull          Statement   " null
+hi link jsConditional   Statement   " if else
+hi link jsRepeat        Statement   " do while for
+hi link jsBranch        Statement   " break continue switch case default return
+hi link jsStatement     Statement   " try catch throw with finally
+hi link jsEnvComment    Comment     " executable
+

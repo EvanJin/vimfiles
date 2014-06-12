@@ -159,13 +159,13 @@ if version >= 700
 	" Tab pages line filler
 	call s:HL('TabLineFill', 'dark4', 'bg')
 	" Active tab page label
-	call s:HL('TabLineSel', 'bg', 'dark4', 'none')
+	call s:HL('TabLineSel', 'bg', 'dark4', 'bold')
 	" Not active tab page label
 	call s:HL('TabLine', 'dark4', 'bg')
 
 	" Match paired bracket under the cursor
-"	call s:HL('MatchParen', 'orange', 'dark3', 'none')
-	call s:HL('MatchParen', 'none', 'dark3', 'none')
+"	call s:HL('MatchParen', 'orange', 'dark3', 'bold')
+	call s:HL('MatchParen', 'none', 'dark3', 'bold')
 endif
 
 if version >= 703
@@ -190,31 +190,31 @@ call s:HL('IncSearch', 'dark0', 'yellow')
 
 call s:HL('Underlined', 'blue', 'none', 'underline')
 
-call s:HL('StatusLine',   'dark0', 'dark4', 'none')
-call s:HL('StatusLineNC', 'light4', 'dark2', 'none')
+call s:HL('StatusLine',   'dark0', 'dark4', 'bold')
+call s:HL('StatusLineNC', 'light4', 'dark2', 'bold')
 
 " The column separating vertically split windows
 call s:HL('VertSplit', 'light4', 'dark2')
 
 " Current match in wildmenu completion
-call s:HL('WildMenu', 'blue', 'dark2', 'none')
+call s:HL('WildMenu', 'blue', 'dark2', 'bold')
 
 " Directory names, special names in listing
-call s:HL('Directory', 'green', 'none', 'none')
+call s:HL('Directory', 'green', 'none', 'bold')
 
 " Titles for output from :set all, :autocmd, etc.
-call s:HL('Title', 'green', 'none', 'none')
+call s:HL('Title', 'green', 'none', 'bold')
 
 " Error messages on the command line
-call s:HL('ErrorMsg',   'bg', 'red', 'none')
+call s:HL('ErrorMsg',   'bg', 'red', 'bold')
 " More prompt: -- More --
-call s:HL('MoreMsg',    'yellow', 'none', 'none')
+call s:HL('MoreMsg',    'yellow', 'none', 'bold')
 " Current mode message: -- INSERT --
-call s:HL('ModeMsg',    'yellow', 'none', 'none')
+call s:HL('ModeMsg',    'yellow', 'none', 'bold')
 " 'Press enter' prompt and yes/no questions
-call s:HL('Question',   'orange', 'none', 'none')
+call s:HL('Question',   'orange', 'none', 'bold')
 " Warning messages
-call s:HL('WarningMsg', 'red', 'none', 'none')
+call s:HL('WarningMsg', 'red', 'none', 'bold')
 
 " }}}
 " Gutter: {{{
@@ -248,7 +248,7 @@ call s:HL('lCursor', 'none', 'none', 'inverse')
 call s:HL('Special', 'orange')
 
 call s:HL('Comment', 'medium', 'none', 'italic')
-call s:HL('Todo',    'fg', 'bg', 'none')
+call s:HL('Todo',    'fg', 'bg', 'bold')
 
 " Generic statement
 call s:HL('Statement',   'red')
@@ -268,7 +268,7 @@ call s:HL('Keyword',     'red')
 " Variable name
 call s:HL('Identifier', 'blue')
 " Function name
-call s:HL('Function',   'green', 'none', 'none')
+call s:HL('Function',   'green', 'none', 'bold')
 
 " Generic preprocessor
 call s:HL('PreProc',   'aqua')
@@ -310,7 +310,7 @@ if version >= 700
 	" Popup menu: normal item
 	call s:HL('Pmenu', 'light1', 'dark2')
 	" Popup menu: selected item
-	call s:HL('PmenuSel', 'dark2', 'blue', 'none')
+	call s:HL('PmenuSel', 'dark2', 'blue', 'bold')
 	" Popup menu: scrollbar
 	call s:HL('PmenuSbar', 'none', 'dark2')
 	" Popup menu: scrollbar thumb
@@ -404,12 +404,12 @@ call s:HL('diffLine', 'blue')
 call s:HL('htmlTag', 'blue')
 call s:HL('htmlEndTag', 'blue')
 
-call s:HL('htmlTagName', 'aqua', '', 'none')
+call s:HL('htmlTagName', 'aqua', '', 'bold')
 call s:HL('htmlArg', 'aqua')
 
 call s:HL('htmlScriptTag', 'purple')
 call s:HL('htmlTagN', 'light1')
-call s:HL('htmlSpecialTagName', 'aqua', '', 'none')
+call s:HL('htmlSpecialTagName', 'aqua', '', 'bold')
 
 call s:HL('htmlLink', 'light4', '', 'underline')
 
@@ -418,15 +418,15 @@ call s:HL('htmlSpecialChar', 'orange')
 " }}}
 " Vim: {{{
 
-call s:HL('vimCommentTitle', 'light4', '', 'none,italic')
+call s:HL('vimCommentTitle', 'light4', '', 'bold,italic')
 
 "hi! def link vimVar Identifier
 "hi! def link vimFunc Function
 "hi! def link vimUserFunc Function
 
 
-"call s:HL('vimUserFunc', 'green', '', 'none')
-"call s:HL('vimFunction', 'green', '', 'none')
+"call s:HL('vimUserFunc', 'green', '', 'bold')
+"call s:HL('vimFunction', 'green', '', 'bold')
 
 "call s:HL('vimFunc', 'blue')
 "call s:HL('vimFuncName', 'blue')
@@ -435,8 +435,8 @@ call s:HL('vimCommentTitle', 'light4', '', 'none,italic')
 "call s:HL('vimIsCommand', 'purple')
 
 
-"call s:HL('vimMapMod', 'purple', '', 'none,italic')
-"call s:HL('vimMapModKey', 'purple', '', 'none,italic')
+"call s:HL('vimMapMod', 'purple', '', 'bold,italic')
+"call s:HL('vimMapModKey', 'purple', '', 'bold,italic')
 
 "call s:HL('vimFunction', 'purple')
 "call s:HL('vimUserFunc', 'purple')

@@ -1,139 +1,103 @@
 " Vim color file
-"
-" Author: Anthony Carapetis <anthony.carapetis@gmail.com>
-"
-" Note: Based on github's syntax highlighting theme
-"       Used Brian Mock's darkspectrum as a starting point/template
-"       Thanks to Ryan Heath for an easy list of some of the colours:
-"       http://rpheath.com/posts/356-github-theme-for-syntax-gem
+" Converted from Textmate theme Github using Coloration v0.3.2 (http://github.com/sickill/coloration)
 
-hi clear
+set background=dark
+highlight clear
 
-set background=light
-if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
-    hi clear
-    if exists("syntax_on")
-	syntax reset
-    endif
+if exists("syntax_on")
+  syntax reset
 endif
-let g:colors_name="github"
 
-hi Normal       guifg=#000000 guibg=#F8F8FF
+let g:colors_name = "Github"
 
-" {{{ Cursor
-hi Cursor		guibg=#444454 guifg=#F8F8FF
-hi CursorLine	guibg=#D8D8DD
-hi CursorColumn	guibg=#E8E8EE
-" }}}
+hi Cursor ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#615649 gui=NONE
+hi Visual ctermfg=NONE ctermbg=152 cterm=NONE guifg=NONE guibg=#afc4da gui=NONE
+hi CursorLine ctermfg=NONE ctermbg=231 cterm=NONE guifg=NONE guibg=#eeeeee gui=NONE
+hi CursorColumn ctermfg=NONE ctermbg=231 cterm=NONE guifg=NONE guibg=#eeeeee gui=NONE
+hi ColorColumn ctermfg=NONE ctermbg=231 cterm=NONE guifg=NONE guibg=#eeeeee gui=NONE
+hi LineNr ctermfg=248 ctermbg=231 cterm=NONE guifg=#aaaaaa guibg=#eeeeee gui=NONE
+hi VertSplit ctermfg=252 ctermbg=252 cterm=NONE guifg=#cecece guibg=#cecece gui=NONE
+hi MatchParen ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi StatusLine ctermfg=240 ctermbg=252 cterm=bold guifg=#555555 guibg=#cecece gui=bold
+hi StatusLineNC ctermfg=240 ctermbg=252 cterm=NONE guifg=#555555 guibg=#cecece gui=NONE
+hi Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi PmenuSel ctermfg=NONE ctermbg=152 cterm=NONE guifg=NONE guibg=#afc4da gui=NONE
+hi IncSearch ctermfg=NONE ctermbg=152 cterm=NONE guifg=NONE guibg=#abd5d5 gui=NONE
+hi Search ctermfg=NONE ctermbg=152 cterm=NONE guifg=NONE guibg=#abd5d5 gui=NONE
+hi Directory ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=NONE
+hi Folded ctermfg=145 ctermbg=15 cterm=NONE guifg=#b8b6b1 guibg=#ffffff gui=NONE
 
-" {{{ Diff
-hi DiffAdd         guifg=#003300 guibg=#DDFFDD gui=none
-hi DiffChange                    guibg=#ececec gui=none
-hi DiffText        guifg=#000033 guibg=#DDDDFF gui=none
-hi DiffDelete      guifg=#DDCCCC guibg=#FFDDDD gui=none
-" }}}
-
-" {{{ Folding / Line Numbering / Status Lines
-hi Folded		guibg=#ECECEC guifg=#808080 gui=bold
-hi vimFold		guibg=#ECECEC guifg=#808080 gui=bold
-hi FoldColumn	guibg=#ECECEC guifg=#808080 gui=bold
-
-hi LineNr		guifg=#959595 guibg=#ECECEC gui=bold
-hi NonText		guifg=#808080 guibg=#ECECEC
-hi Folded		guifg=#808080 guibg=#ECECEC gui=bold
-hi FoldeColumn  guifg=#808080 guibg=#ECECEC gui=bold
-
-hi VertSplit	guibg=#bbbbbb guifg=#bbbbbb gui=none
-hi StatusLine   guibg=#bbbbbb guifg=#404040 gui=bold
-hi StatusLineNC guibg=#d4d4d4 guifg=#404040 gui=italic
-" }}}
-
-" {{{ Misc
-hi ModeMsg		guifg=#990000
-hi MoreMsg		guifg=#990000
-
-hi Title		guifg=#ef5939
-hi WarningMsg	guifg=#ef5939
-hi SpecialKey   guifg=#177F80 gui=italic
-
-hi MatchParen	guibg=#cdcdfd guifg=#000000
-hi Underlined	guifg=#000000 gui=underline
-hi Directory	guifg=#990000
-" }}}
-
-" {{{ Search, Visual, etc
-hi Visual		guifg=#FFFFFF guibg=#3465a4 gui=none
-hi VisualNOS    guifg=#FFFFFF guibg=#204a87 gui=none
-hi IncSearch	guibg=#cdcdfd guifg=#000000 gui=italic
-hi Search		guibg=#cdcdfd guifg=#000000 gui=italic
-" }}}
-
-" {{{ Syntax groups
-hi Ignore		guifg=#808080
-hi Identifier	guifg=#0086B3
-hi PreProc		guifg=#A0A0A0 gui=bold
-hi Comment		guifg=#999988
-hi Constant		guifg=#177F80 gui=none
-hi String		guifg=#D81745
-hi Function		guifg=#990000 gui=bold
-hi Statement	guifg=#000000 gui=bold
-hi Type			guifg=#445588 gui=bold
-hi Number		guifg=#1C9898
-hi Todo			guifg=#FFFFFF guibg=#990000 gui=bold
-hi Special		guifg=#159828 gui=bold
-hi rubySymbol   guifg=#960B73
-hi Error        guibg=#f8f8ff guifg=#ff1100 gui=undercurl
-hi Todo         guibg=#f8f8ff guifg=#ff1100 gui=underline
-hi Label        guifg=#000000 gui=bold
-hi StorageClass guifg=#000000 gui=bold
-hi Structure    guifg=#000000 gui=bold
-hi TypeDef      guifg=#000000 gui=bold
-" }}}
-
-" {{{ Completion menus
-hi WildMenu     guifg=#7fbdff guibg=#425c78 gui=none
-
-hi Pmenu        guibg=#808080 guifg=#ffffff gui=bold
-hi PmenuSel     guibg=#cdcdfd guifg=#000000 gui=italic
-hi PmenuSbar    guibg=#000000 guifg=#444444
-hi PmenuThumb   guibg=#aaaaaa guifg=#aaaaaa
-" }}}
-
-" {{{ Spelling
-hi spellBad     guisp=#fcaf3e
-hi spellCap     guisp=#73d216
-hi spellRare    guisp=#fcaf3e
-hi spellLocal   guisp=#729fcf
-" }}}
-
-" {{{ Aliases
-hi link cppSTL          Function
-hi link cppSTLType      Type
-hi link Character		Number
-hi link htmlTag			htmlEndTag
-"hi link htmlTagName     htmlTag
-hi link htmlLink		Underlined
-hi link pythonFunction	Identifier
-hi link Question		Type
-hi link CursorIM		Cursor
-hi link VisualNOS		Visual
-hi link xmlTag			Identifier
-hi link xmlTagName		Identifier
-hi link shDeref			Identifier
-hi link shVariable		Function
-hi link rubySharpBang	Special
-hi link perlSharpBang	Special
-hi link schemeFunc      Statement
-"hi link shSpecialVariables Constant
-"hi link bashSpecialVariables Constant
-" }}}
-
-" {{{ Tabs (non-gui0
-hi TabLine		guifg=#404040 guibg=#dddddd gui=none
-hi TabLineFill	guifg=#404040 guibg=#dddddd gui=none
-hi TabLineSel	guifg=#404040 gui=bold
-" }}}
-"
-" vim: sw=4 ts=4 foldmethod=marker
+hi Normal ctermfg=240 ctermbg=15 cterm=NONE guifg=#555555 guibg=#ffffff gui=NONE
+hi Boolean ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=NONE
+hi Character ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=NONE
+hi Comment ctermfg=145 ctermbg=NONE cterm=NONE guifg=#b8b6b1 guibg=NONE gui=NONE
+hi Conditional ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi Define ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi ErrorMsg ctermfg=231 ctermbg=38 cterm=NONE guifg=#f8f8f0 guibg=#00a8c6 gui=NONE
+hi WarningMsg ctermfg=231 ctermbg=38 cterm=NONE guifg=#f8f8f0 guibg=#00a8c6 gui=NONE
+hi Float ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi Function ctermfg=88 ctermbg=NONE cterm=NONE guifg=#990000 guibg=NONE gui=NONE
+hi Identifier ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=italic
+hi Keyword ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi Label ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi NonText ctermfg=59 ctermbg=231 cterm=NONE guifg=#3b3a32 guibg=#f7f7f7 gui=NONE
+hi Number ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi Operator ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi PreProc ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi Special ctermfg=240 ctermbg=NONE cterm=NONE guifg=#555555 guibg=NONE gui=NONE
+hi SpecialKey ctermfg=59 ctermbg=231 cterm=NONE guifg=#3b3a32 guibg=#eeeeee gui=NONE
+hi Statement ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi StorageClass ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=italic
+hi String ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi Tag ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008080 guibg=NONE gui=NONE
+hi Title ctermfg=240 ctermbg=NONE cterm=bold guifg=#555555 guibg=NONE gui=bold
+hi Todo ctermfg=145 ctermbg=NONE cterm=inverse,bold guifg=#b8b6b1 guibg=NONE gui=inverse,bold
+hi Type ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi rubyClass ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi rubyFunction ctermfg=88 ctermbg=NONE cterm=NONE guifg=#990000 guibg=NONE gui=NONE
+hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi rubySymbol ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=NONE
+hi rubyConstant ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=italic
+hi rubyStringDelimiter ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi rubyBlockParameter ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=italic
+hi rubyInstanceVariable ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008080 guibg=NONE gui=NONE
+hi rubyInclude ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi rubyGlobalVariable ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008080 guibg=NONE gui=NONE
+hi rubyRegexp ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi rubyRegexpDelimiter ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi rubyEscape ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=NONE
+hi rubyControl ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi rubyClassVariable ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008080 guibg=NONE gui=NONE
+hi rubyOperator ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi rubyException ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=NONE
+hi rubyPseudoVariable ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008080 guibg=NONE gui=NONE
+hi rubyRailsUserClass ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=italic
+hi rubyRailsARAssociationMethod ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi rubyRailsARMethod ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi rubyRailsRenderMethod ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi rubyRailsMethod ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi erubyDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi erubyComment ctermfg=145 ctermbg=NONE cterm=NONE guifg=#b8b6b1 guibg=NONE gui=NONE
+hi erubyRailsMethod ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi htmlTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi htmlEndTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi htmlTagName ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi htmlArg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi htmlSpecialChar ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=NONE
+hi javaScriptFunction ctermfg=235 ctermbg=NONE cterm=NONE guifg=#222222 guibg=NONE gui=italic
+hi javaScriptRailsFunction ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi yamlKey ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008080 guibg=NONE gui=NONE
+hi yamlAnchor ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008080 guibg=NONE gui=NONE
+hi yamlAlias ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008080 guibg=NONE gui=NONE
+hi yamlDocumentHeader ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi cssURL ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=italic
+hi cssFunctionName ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi cssColor ctermfg=61 ctermbg=NONE cterm=NONE guifg=#606aa1 guibg=NONE gui=NONE
+hi cssPseudoClassId ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi cssClassName ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi cssValueLength ctermfg=161 ctermbg=NONE cterm=NONE guifg=#dd1144 guibg=NONE gui=NONE
+hi cssCommonAttr ctermfg=60 ctermbg=NONE cterm=NONE guifg=#445588 guibg=NONE gui=NONE
+hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE

@@ -9,8 +9,8 @@ endif
 let g:colors_name="vilight"
 
 hi Normal         guifg=#b6b6b6           guibg=#212121
-hi Cursor         guifg=#212121           guibg=#9ca9b7
-hi CursorLine	  guifg=NONE		      guibg=NONE 
+hi Cursor         guifg=#212121           guibg=#b0d0f0
+hi CursorLine	    guifg=NONE		        guibg=NONE
 hi Directory      guifg=#6c8095            guibg=NONE
 hi VertSplit      guifg=#b6b6b6           guibg=#a6a6a6
 hi Folded         guifg=#9ca9b7           guibg=NONE        gui=italic

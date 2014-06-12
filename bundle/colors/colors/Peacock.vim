@@ -1,5 +1,5 @@
 " Vim color file
-" Converted from Textmate theme Oasis using Coloration v0.3.2 (http://github.com/sickill/coloration)
+" Converted from Textmate theme Peacock using Coloration v0.3.2 (http://github.com/sickill/coloration)
 
 set background=dark
 highlight clear
@@ -8,7 +8,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "peacock"
+let g:colors_name = "Peacock"
 
 hi Cursor ctermfg=NONE ctermbg=231 cterm=NONE guifg=NONE guibg=#f8f8f0 gui=NONE
 hi Visual ctermfg=NONE ctermbg=16 cterm=NONE guifg=NONE guibg=#161a1f gui=NONE
@@ -55,7 +55,6 @@ hi Title ctermfg=224 ctermbg=NONE cterm=bold guifg=#ede0ce guibg=NONE gui=bold
 hi Todo ctermfg=95 ctermbg=NONE cterm=inverse,bold guifg=#7a7267 guibg=NONE gui=inverse,bold
 hi Type ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
-
 hi rubyClass ctermfg=37 ctermbg=NONE cterm=NONE guifg=#26a6a6 guibg=NONE gui=NONE
 hi rubyFunction ctermfg=148 ctermbg=NONE cterm=NONE guifg=#bcd42a guibg=NONE gui=NONE
 hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
@@ -87,11 +86,9 @@ hi htmlEndTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NON
 hi htmlTagName ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi htmlArg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi htmlSpecialChar ctermfg=203 ctermbg=NONE cterm=NONE guifg=#ff5d38 guibg=NONE gui=NONE
-
 hi javaScriptFunction ctermfg=37 ctermbg=NONE cterm=NONE guifg=#26a6a6 guibg=NONE gui=italic
 hi javaScriptRailsFunction ctermfg=203 ctermbg=NONE cterm=NONE guifg=#ff5d38 guibg=NONE gui=NONE
 hi javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-
 hi yamlKey ctermfg=37 ctermbg=NONE cterm=NONE guifg=#26a6a6 guibg=NONE gui=NONE
 hi yamlAnchor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi yamlAlias ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE

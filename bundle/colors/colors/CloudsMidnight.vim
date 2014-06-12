@@ -11,7 +11,7 @@ endif
 let g:colors_name = "CloudsMidnight"
 
 hi Cursor ctermfg=234 ctermbg=110 cterm=NONE guifg=#191919 guibg=#7da5dc gui=NONE
-hi Visual ctermfg=NONE ctermbg=0 cterm=NONE guifg=NONE guibg=#000000 gui=NONE
+hi Visual ctermfg=NONE ctermbg=0 cterm=NONE guifg=NONE guibg=#005f87 gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#252525 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#252525 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#252525 gui=NONE
@@ -90,10 +90,10 @@ hi htmlEndTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NON
 hi htmlTagName ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi htmlArg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi htmlSpecialChar ctermfg=133 ctermbg=NONE cterm=NONE guifg=#a165ac guibg=NONE gui=NONE
-hi javaScriptFunction ctermfg=160 ctermbg=NONE cterm=NONE guifg=#e92e2e guibg=NONE gui=NONE
-hi javaScriptRailsFunction ctermfg=160 ctermbg=NONE cterm=NONE guifg=#e92e2e guibg=NONE gui=NONE
-hi javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi yamlKey ctermfg=241 ctermbg=NONE cterm=NONE guifg=#606060 guibg=NONE gui=NONE
+hi javascriptFunction ctermfg=160 ctermbg=NONE cterm=NONE guifg=#e92e2e guibg=NONE gui=NONE
+hi javascriptRailsFunction ctermfg=160 ctermbg=NONE cterm=NONE guifg=#e92e2e guibg=NONE gui=NONE
+hi javascriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi yamlkey ctermfg=241 ctermbg=NONE cterm=NONE guifg=#606060 guibg=NONE gui=NONE
 hi yamlAnchor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi yamlAlias ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi yamlDocumentHeader ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5d90cd guibg=NONE gui=NONE
